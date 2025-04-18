@@ -127,29 +127,36 @@ async function loadArticles() {
             // Extract the first paragraph from article content
             const firstParagraph = article.content.split('\n\n')[0]; 
             
-            // Calculate grid size based on content length
-            const contentLength = article.content.length;
-            let gridWidth = 1;
-            let gridHeight = 1;
+            // Assign random grid sizes instead of calculating based on content length
+            let gridWidth, gridHeight;
             
-            // Adjust grid size based on content length
-            if (contentLength > 500) {
-                gridWidth = 2;
-                gridHeight = 2;
-            } else if (contentLength > 300) {
-                gridWidth = 2;
-                gridHeight = 1;
-            } else if (contentLength > 150) {
-                gridWidth = 1;
-                gridHeight = 2;
-            }
-            
-            // Override with metadata if specified
+            // First check if there's a specific size in metadata
             if (article.gridSize) {
                 const [width, height] = article.gridSize.split('x').map(Number);
                 if (width && height) {
                     gridWidth = width;
                     gridHeight = height;
+                }
+            } else {
+                // Generate random sizes with weighted probabilities
+                const sizeOptions = [
+                    { width: 1, height: 1, weight: 40 },  // 1x1 (40% chance)
+                    { width: 2, height: 1, weight: 30 },  // 2x1 (30% chance)
+                    { width: 1, height: 2, weight: 20 },  // 1x2 (20% chance)
+                    { width: 2, height: 2, weight: 10 }   // 2x2 (10% chance)
+                ];
+                
+                // Create weighted random selection
+                const totalWeight = sizeOptions.reduce((sum, option) => sum + option.weight, 0);
+                let random = Math.random() * totalWeight;
+                
+                for (const option of sizeOptions) {
+                    random -= option.weight;
+                    if (random <= 0) {
+                        gridWidth = option.width;
+                        gridHeight = option.height;
+                        break;
+                    }
                 }
             }
             
