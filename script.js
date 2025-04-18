@@ -1,5 +1,5 @@
 // Theme toggle functionality
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
     
@@ -14,59 +14,87 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('theme', currentTheme);
     });
     
-    // Load articles from sample data
-    loadArticles();
+    // Load articles from markdown files
+    await loadArticles();
 });
 
-// Sample article data (in a real application, this would come from a database or API)
-const articles = [
-    {
-        id: 1,
-        title: 'The Process',
-        date: '2023-05-15',
-        content: 'This is the process. Every day sketches, brainfarts and ideas flying around in my backpack and apartment. I hope they can inspire or help someone out there.'
-    },
-    {
-        id: 2,
-        title: 'The Project',
-        date: '2023-06-22',
-        content: 'Projects are the manifestation of ideas. They take shape through consistent effort and iteration. This article explores the journey from concept to completion.'
-    },
-    {
-        id: 3,
-        title: 'The Files',
-        date: '2023-07-10',
-        content: 'Organization is key to productivity. How we structure our files and thoughts determines how efficiently we can retrieve and build upon them later.'
-    },
-    {
-        id: 4,
-        title: 'The Human',
-        date: '2023-08-05',
-        content: 'At the center of all creation is the human experience. Our perceptions, emotions, and interactions shape the work we produce and how it\'s received.'
-    },
-    {
-        id: 5,
-        title: 'The Sound',
-        date: '2023-09-18',
-        content: 'Sound influences our environment in subtle yet profound ways. This exploration of audio landscapes reveals how sound shapes our creative process.'
-    },
-    {
-        id: 6,
-        title: 'Minimal Design',
-        date: '2023-10-30',
-        content: 'Less is more. The principles of minimal design focus on removing the unnecessary to emphasize what truly matters. This article examines how reduction leads to clarity.'
+// Articles will be loaded from markdown files in the articles directory
+let articles = [];
+
+// Function to parse markdown frontmatter
+function parseFrontMatter(text) {
+    const frontMatterRegex = /^---\n([\s\S]*?)\n---\n([\s\S]*)$/;
+    const match = text.match(frontMatterRegex);
+    
+    if (!match) return { content: text };
+    
+    const frontMatter = match[1];
+    const content = match[2].trim();
+    
+    const metadata = {};
+    const lines = frontMatter.split('\n');
+    
+    lines.forEach(line => {
+        const [key, value] = line.split(': ');
+        if (key && value) {
+            metadata[key.trim()] = value.trim();
+        }
+    });
+    
+    return { ...metadata, content };
+}
+
+// Function to fetch and parse article files
+async function fetchArticles() {
+    try {
+        const response = await fetch('articles/');
+        const html = await response.text();
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        const links = Array.from(doc.querySelectorAll('a'));
+        
+        const articlePromises = links
+            .filter(link => link.href.endsWith('.md'))
+            .map(async link => {
+                const fileName = link.href.split('/').pop();
+                const articleResponse = await fetch(`articles/${fileName}`);
+                const markdown = await articleResponse.text();
+                const article = parseFrontMatter(markdown);
+                article.id = parseInt(article.id);
+                return article;
+            });
+        
+        articles = await Promise.all(articlePromises);
+        articles.sort((a, b) => new Date(b.date) - new Date(a.date));
+        
+        return articles;
+    } catch (error) {
+        console.error('Error loading articles:', error);
+        return [];
     }
-];
+}
 
 // Function to load articles into the grid
-function loadArticles() {
+async function loadArticles() {
     const articleGrid = document.querySelector('.article-grid');
     
     // If we're on the main page with the article grid
     if (articleGrid) {
+        // Fetch articles from markdown files
+        await fetchArticles();
+        
         articles.forEach(article => {
             const articleBox = document.createElement('div');
             articleBox.className = 'article-box';
+            
+            // Apply grid size from article metadata
+            const gridSize = article.gridSize || '1x1';
+            const [width, height] = gridSize.split('x').map(Number);
+            
+            // Set grid properties based on size
+            articleBox.style.gridColumn = `span ${width}`;
+            articleBox.style.gridRow = `span ${height}`;
+            
             articleBox.innerHTML = `
                 <div>
                     <h2 class="article-title">${article.title}</h2>
@@ -88,9 +116,14 @@ function loadArticles() {
 }
 
 // Function to load individual article page
-function loadArticlePage() {
+async function loadArticlePage() {
     const urlParams = new URLSearchParams(window.location.search);
     const articleId = parseInt(urlParams.get('id'));
+    
+    // Fetch articles if they haven't been loaded yet
+    if (articles.length === 0) {
+        await fetchArticles();
+    }
     
     const article = articles.find(a => a.id === articleId);
     
