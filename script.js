@@ -21,6 +21,20 @@ document.addEventListener('DOMContentLoaded', async () => {
 // Articles will be loaded from markdown files in the articles directory
 let articles = [];
 
+// Load click counts from localStorage
+function getClickCounts() {
+    const savedCounts = localStorage.getItem('articleClickCounts');
+    return savedCounts ? JSON.parse(savedCounts) : {};
+}
+
+// Save click counts to localStorage
+function saveClickCount(articleId) {
+    const counts = getClickCounts();
+    counts[articleId] = (counts[articleId] || 0) + 1;
+    localStorage.setItem('articleClickCounts', JSON.stringify(counts));
+    return counts[articleId];
+}
+
 // Function to parse markdown frontmatter
 function parseFrontMatter(text) {
     const frontMatterRegex = /^---\n([\s\S]*?)\n---\n([\s\S]*)$/;
@@ -83,6 +97,21 @@ async function loadArticles() {
         // Fetch articles from markdown files
         await fetchArticles();
         
+        // Get click counts from localStorage
+        const clickCounts = getClickCounts();
+        
+        // Sort articles by click count (descending), then by date if counts are equal
+        articles.sort((a, b) => {
+            const countA = clickCounts[a.id] || 0;
+            const countB = clickCounts[b.id] || 0;
+            
+            if (countA !== countB) {
+                return countB - countA; // Sort by click count (most clicked first)
+            } else {
+                return new Date(b.date) - new Date(a.date); // Then by date
+            }
+        });
+        
         articles.forEach(article => {
             const articleBox = document.createElement('div');
             articleBox.className = 'article-box';
@@ -95,15 +124,59 @@ async function loadArticles() {
             articleBox.style.gridColumn = `span ${width}`;
             articleBox.style.gridRow = `span ${height}`;
             
+            // Extract the first paragraph from article content
+            const firstParagraph = article.content.split('\n\n')[0]; 
+            
+            // Calculate grid size based on content length
+            const contentLength = article.content.length;
+            let gridWidth = 1;
+            let gridHeight = 1;
+            
+            // Adjust grid size based on content length
+            if (contentLength > 500) {
+                gridWidth = 2;
+                gridHeight = 2;
+            } else if (contentLength > 300) {
+                gridWidth = 2;
+                gridHeight = 1;
+            } else if (contentLength > 150) {
+                gridWidth = 1;
+                gridHeight = 2;
+            }
+            
+            // Override with metadata if specified
+            if (article.gridSize) {
+                const [width, height] = article.gridSize.split('x').map(Number);
+                if (width && height) {
+                    gridWidth = width;
+                    gridHeight = height;
+                }
+            }
+            
             articleBox.innerHTML = `
                 <div>
                     <h2 class="article-title">${article.title}</h2>
                     <p class="article-date">${formatDate(article.date)}</p>
+                    <p class="article-preview">${firstParagraph}</p>
                 </div>
             `;
             
-            // Add click event to navigate to article page
+            // Set grid properties based on calculated size
+            articleBox.style.gridColumn = `span ${gridWidth}`;
+            articleBox.style.gridRow = `span ${gridHeight}`;
+            
+            // Add click count display if article has been clicked
+            const clickCount = clickCounts[article.id] || 0;
+            if (clickCount > 0) {
+                const clickCountElement = document.createElement('span');
+                clickCountElement.className = 'click-count';
+                clickCountElement.textContent = `${clickCount} view${clickCount !== 1 ? 's' : ''}`;
+                articleBox.appendChild(clickCountElement);
+            }
+            
+            // Add click event to navigate to article page and update click count
             articleBox.addEventListener('click', () => {
+                saveClickCount(article.id);
                 window.location.href = `article.html?id=${article.id}`;
             });
             
@@ -124,6 +197,9 @@ async function loadArticlePage() {
     if (articles.length === 0) {
         await fetchArticles();
     }
+    
+    // Update click count when article page is loaded
+    // We don't increment here as it was already incremented on the main page click
     
     const article = articles.find(a => a.id === articleId);
     
