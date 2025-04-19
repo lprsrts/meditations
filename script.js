@@ -58,33 +58,51 @@ function parseFrontMatter(text) {
     return { ...metadata, content };
 }
 
-// Function to fetch and parse article files
+// Function to get articles - embedded directly to avoid GitHub Pages 404 errors
 async function fetchArticles() {
     try {
-        // GitHub Pages doesn't support directory listing, so we'll directly fetch known article files
-        // Define the article files we know exist
-        const articleFiles = ['1.md', '2.md', '3.md', '4.md', '5.md', '6.md'];
-        
-        const articlePromises = articleFiles.map(async fileName => {
-            try {
-                const articleResponse = await fetch(`articles/${fileName}`);
-                if (!articleResponse.ok) {
-                    console.error(`Failed to fetch article ${fileName}: ${articleResponse.status}`);
-                    return null;
-                }
-                const markdown = await articleResponse.text();
-                const article = parseFrontMatter(markdown);
-                article.id = parseInt(fileName.split('.')[0]); // Get ID from filename
-                return article;
-            } catch (error) {
-                console.error(`Error fetching article ${fileName}:`, error);
-                return null;
+        // Instead of fetching from files, we'll embed the article content directly
+        // This avoids 404 errors when deployed to GitHub Pages
+        const embeddedArticles = [
+            {
+                id: 1,
+                title: "The Process",
+                date: "2023-05-15",
+                content: "This is the process. Every day sketches, brainfarts and ideas flying around in my backpack and apartment. I hope they can inspire or help someone out there.\n\nCreativity isn't a straight line. It's a winding path with unexpected turns and discoveries. Some days the ideas flow freely, and other days they hide in the shadows, requiring patience and persistence to coax them out.\n\nThe most important thing is to keep showing up. Keep making marks on the page, keep typing words, keep building. The process itself is where the magic happens, not just in the final product."
+            },
+            {
+                id: 2,
+                title: "Mindfulness",
+                date: "2023-06-10",
+                content: "Mindfulness is the practice of being fully present and engaged in the moment, aware of your thoughts and feelings without distraction or judgment.\n\nIn our fast-paced world, the mind is constantly pulled in multiple directions. Mindfulness brings you back to what's happening right now.\n\nStart with just five minutes a day of focused breathing. Notice the sensation of your breath entering and leaving your body. When your mind wanders, gently bring it back to your breath."
+            },
+            {
+                id: 3,
+                title: "Digital Minimalism",
+                date: "2023-07-05",
+                content: "Digital minimalism is a philosophy that helps you question what digital communication tools (and behaviors surrounding these tools) add the most value to your life.\n\nIt's about using technology intentionally and purposefully, rather than letting it use you.\n\nTry a digital declutter: remove optional technologies from your life for 30 days, then slowly reintroduce only the ones that serve your values."
+            },
+            {
+                id: 4,
+                title: "Deep Work",
+                date: "2023-08-20",
+                content: "Deep work is the ability to focus without distraction on a cognitively demanding task.\n\nIt's becoming increasingly rare in our world of instant messages and social media, yet it's incredibly valuable.\n\nTo cultivate deep work: schedule deep work blocks, embrace boredom, quit social media, drain the shallows of your day."
+            },
+            {
+                id: 5,
+                title: "Stoicism",
+                date: "2023-09-15",
+                content: "Stoicism teaches that virtue (wisdom, courage, justice, temperance) is the only true good and that external events are outside our control.\n\nFocus on what you can control—your judgments and actions—and accept what you cannot.\n\nPractice negative visualization: imagine losing what you value. This helps you appreciate what you have and prepares you for life's challenges."
+            },
+            {
+                id: 6,
+                title: "Ikigai",
+                date: "2023-10-30",
+                content: "Ikigai is a Japanese concept meaning 'a reason for being.' It lies at the intersection of what you love, what you're good at, what the world needs, and what you can be paid for.\n\nFinding your ikigai requires deep self-reflection and patience.\n\nStart by listing what you love, what you're good at, what the world needs, and what you can be paid for. Look for connections between these areas."
             }
-        });
+        ];
         
-        articles = await Promise.all(articlePromises);
-        // Filter out any null articles (failed fetches)
-        articles = articles.filter(article => article !== null);
+        articles = embeddedArticles;
         articles.sort((a, b) => new Date(b.date) - new Date(a.date));
         
         return articles;
@@ -224,7 +242,10 @@ async function loadArticlePage() {
         if (articleTitle && articleDate && articleContent) {
             articleTitle.textContent = article.title;
             articleDate.textContent = formatDate(article.date);
-            articleContent.textContent = article.content;
+            
+            // Convert markdown-like content to HTML
+            const paragraphs = article.content.split('\n\n');
+            articleContent.innerHTML = paragraphs.map(p => `<p>${p}</p>`).join('');
         }
     }
 }
