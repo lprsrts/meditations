@@ -1,4 +1,5 @@
 ---
+import ThemeToggle from './ThemeToggle';
 // ArticleLayout.astro - simplified layout without top bar and images
 ---
 
@@ -9,8 +10,14 @@
     <title>KENDİME DÜŞÜNCELER</title>
     <link rel="stylesheet" href="/styles/global.css">
     <link rel="stylesheet" href="/styles/article.css">
+    <script>
+      // Initialize theme from localStorage when the page loads
+      const theme = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+    </script>
   </head>
   <body>
+    <ThemeToggle client:load />
     <main class="article">
       <aside class="left-col"></aside>
       <section class="center-col">
