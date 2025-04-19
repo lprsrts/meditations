@@ -61,24 +61,30 @@ function parseFrontMatter(text) {
 // Function to fetch and parse article files
 async function fetchArticles() {
     try {
-        const response = await fetch('articles/');
-        const html = await response.text();
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(html, 'text/html');
-        const links = Array.from(doc.querySelectorAll('a'));
+        // GitHub Pages doesn't support directory listing, so we'll directly fetch known article files
+        // Define the article files we know exist
+        const articleFiles = ['1.md', '2.md', '3.md', '4.md', '5.md', '6.md'];
         
-        const articlePromises = links
-            .filter(link => link.href.endsWith('.md'))
-            .map(async link => {
-                const fileName = link.href.split('/').pop();
+        const articlePromises = articleFiles.map(async fileName => {
+            try {
                 const articleResponse = await fetch(`articles/${fileName}`);
+                if (!articleResponse.ok) {
+                    console.error(`Failed to fetch article ${fileName}: ${articleResponse.status}`);
+                    return null;
+                }
                 const markdown = await articleResponse.text();
                 const article = parseFrontMatter(markdown);
-                article.id = parseInt(article.id);
+                article.id = parseInt(fileName.split('.')[0]); // Get ID from filename
                 return article;
-            });
+            } catch (error) {
+                console.error(`Error fetching article ${fileName}:`, error);
+                return null;
+            }
+        });
         
         articles = await Promise.all(articlePromises);
+        // Filter out any null articles (failed fetches)
+        articles = articles.filter(article => article !== null);
         articles.sort((a, b) => new Date(b.date) - new Date(a.date));
         
         return articles;
