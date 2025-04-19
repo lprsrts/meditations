@@ -11,6 +11,8 @@ export default defineConfig({
   base: '/',
   trailingSlash: 'ignore',
   build: {
-    format: 'directory'
-  }
+    format: 'directory',
+    assets: '_assets' // Changing from default _astro to _assets to avoid potential path issues
+  },
+  outDir: './dist' // Explicitly set output directory
 });
