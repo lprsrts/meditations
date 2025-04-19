@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +13,7 @@ layout: default
 </head>
 <body class="light-mode">
     <header>
-        <h1>Meditasyonlar</h1>
+        <h1><a href="/" style="text-decoration: none; color: inherit;">Meditasyonlar</a></h1>
         <button id="theme-toggle" aria-label="Toggle dark/light mode">
             <span class="toggle-icon">◐</span>
         </button>
@@ -24,13 +25,13 @@ layout: default
                 <h1 id="article-title">{{ page.title }}</h1>
                 <p id="article-date" class="article-date">{{ page.date | date: "%b %d, %Y" }}</p>
             </div>
-            <div id="article-content" class="article-content">{{ content }}</div>
+            <div id="article-content" class="article-content">{{ content | markdownify }}</div>
             <a href="/" class="back-link">← Geri don.</a>
         </article>
     </main>
 
-    <footer>
-        <p>&copy; 2025 Meditasyonlar</p>
-    </footer>
-</body>
+        <footer>
+            <p>&copy; 2025 Meditasyonlar</p>
+        </footer>
+    </body>
 </html>
