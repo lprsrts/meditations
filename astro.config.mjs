@@ -11,8 +11,12 @@ export default defineConfig({
   base: '/',
   trailingSlash: 'ignore',
   build: {
-    format: 'directory',
-    assets: '_assets' // Changing from default _astro to _assets to avoid potential path issues
+    assets: 'assets', // Using a simpler directory name without underscore
+    assetsPrefix: '/' // Ensure assets are loaded from root
   },
-  outDir: './dist' // Explicitly set output directory
+  vite: {
+    build: {
+      assetsInlineLimit: 0 // Prevent Vite from inlining assets
+    }
+  }
 });
