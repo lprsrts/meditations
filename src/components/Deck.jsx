@@ -3,10 +3,26 @@ import { motion } from 'framer-motion';
 import Card from './Card';
 
 export default function Deck({ articles }) {
-  // Sort articles by date, newest first
-  const sortedArticles = [...articles].sort((a, b) => 
-    new Date(a.data.date) - new Date(b.data.date)
-  );
+  const [mounted, setMounted] = useState(false);
+  const [sortedArticles, setSortedArticles] = useState([]);
+
+  useEffect(() => {
+    setMounted(true);
+    // Sort articles by date, newest first
+    const sorted = [...articles].sort((a, b) => 
+      new Date(b.data.date) - new Date(a.data.date)
+    );
+    setSortedArticles(sorted);
+  }, [articles]);
+
+  // Before hydration is complete, render a simplified version
+  if (!mounted) {
+    return (
+      <div className="deck">
+        <div className="site-title">DÜŞÜNCELERİ KAYDETME DÜRTÜSÜNDEKİ</div>
+      </div>
+    );
+  }
 
   return (
     <div className="deck">
@@ -21,7 +37,7 @@ export default function Deck({ articles }) {
           index={i}
         />
       ))}
-      <div className="site-title">KENDİME DÜŞÜNCELER</div>
+      <div className="site-title">DÜŞÜNCELERİ KAYDETME DÜRTÜSÜNDEKİ</div>
     </div>
   );
 }

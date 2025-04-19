@@ -11,12 +11,12 @@ const articles = await getCollection('articles');
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>KENDİME DÜŞÜNCELER</title>
+    <title>DÜŞÜNCELERİ KAYDETME DÜRTÜSÜNDEKİ</title>
     <link rel="stylesheet" href="/styles/global.css">
-    <script>
-      // Initialize theme from localStorage when the page loads
-      const theme = localStorage.getItem('theme') || 'light';
-      document.documentElement.setAttribute('data-theme', theme);
+    <script is:inline>
+      // Initialize with light mode by default
+      document.documentElement.setAttribute('data-theme', 'light');
+      // This will be overridden by the client-side code if there's a saved preference
     </script>
   </head>
   <body>

@@ -12,6 +12,10 @@ export default function Card({ article, index }) {
       day: 'numeric'
     });
   };
+  
+  // Use deterministic values for animation properties to avoid hydration mismatches
+  const yOffset = index % 2 === 0 ? -30 : 30; 
+  const rotation = (index % 3 - 1) * 5;  // -5, 0, or 5 degrees
 
   return (
     <motion.div
@@ -20,15 +24,15 @@ export default function Card({ article, index }) {
       dragMomentum={false}
       onDragStart={(e, info) => {
         // Bring card to front when dragging starts
-        e.target.style.zIndex = Date.now();
+        e.target.style.zIndex = 1000 + index;
       }}
-      initial={{ scale: 0, opacity: 0, y: -50 + Math.random() * 100 }}
+      initial={{ scale: 0, opacity: 0, y: yOffset }}
       animate={{ 
         scale: 1, 
         opacity: 1, 
         y: 0, 
         x: 30 + (index % 3) * 30, // Stagger cards horizontally
-        rotate: -5 + Math.random() * 10 // Random slight rotation
+        rotate: rotation // Deterministic rotation
       }}
       transition={{ 
         delay: index * 0.15, 

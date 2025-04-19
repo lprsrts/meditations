@@ -10,10 +10,10 @@ import ThemeToggle from './ThemeToggle';
     <title>KENDİME DÜŞÜNCELER</title>
     <link rel="stylesheet" href="/styles/global.css">
     <link rel="stylesheet" href="/styles/article.css">
-    <script>
-      // Initialize theme from localStorage when the page loads
-      const theme = localStorage.getItem('theme') || 'light';
-      document.documentElement.setAttribute('data-theme', theme);
+    <script is:inline>
+      // Initialize with light mode by default
+      document.documentElement.setAttribute('data-theme', 'light');
+      // This will be overridden by the client-side code if there's a saved preference
     </script>
   </head>
   <body>
