@@ -1,11 +1,14 @@
+---
+layout: default
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Makale | Meditasyonlar</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <title>{{ page.title }} | Meditasyonlar</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/script.js" defer></script>
 </head>
 <body class="light-mode">
     <header>
@@ -18,11 +21,11 @@
     <main class="article-container">
         <article>
             <div class="article-header">
-                <h1 id="article-title"></h1>
-                <p id="article-date" class="article-date"></p>
+                <h1 id="article-title">{{ page.title }}</h1>
+                <p id="article-date" class="article-date">{{ page.date | date: "%b %d, %Y" }}</p>
             </div>
-            <div id="article-content" class="article-content"></div>
-            <a href="index.html" class="back-link">← Geri don.</a>
+            <div id="article-content" class="article-content">{{ content }}</div>
+            <a href="/" class="back-link">← Geri don.</a>
         </article>
     </main>
 

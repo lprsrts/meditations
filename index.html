@@ -21,15 +21,17 @@ title: Meditasyonlar
         </header>
 
         <main class="article-grid">
-            <!-- Article boxes will be dynamically loaded from articles.js -->
-            <ul>
-                {% for article in site.articles %}
-                <li>
-                    <a href="{{ article.url }}">{{ article.title }}</a>
-                    <span>{{ article.date | date: "%b %d, %y" }}</span>
-                </li>
-                {% endfor %}
-            </ul>
+            {% for article in site.articles %}
+                <div class="article-box" style="grid-column: span 1; grid-row: span 1;">
+                    <div>
+                        <h2 class="article-title">{{ article.title }}</h2>
+                        <p class="article-date">{{ article.date | date: "%b %d, %Y" }}</p>
+                        <p class="article-preview">{{ article.content | strip_html | truncatewords: 30 }}</p>
+                    </div>
+                    {% assign click_id = article.id | prepend: 'article-' %}
+                    <a href="{{ article.url }}" class="article-link" data-id="{{ article.id }}"></a>
+                </div>
+            {% endfor %}
         </main>
 
         <footer>
