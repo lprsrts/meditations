@@ -57,11 +57,22 @@ function setupArticleClickTracking() {
                         box.appendChild(clickCountElement);
                     }
                     
-                    // Add click event to update click count
+                    // Add click event to update click count and navigate to article
+                    box.style.cursor = 'pointer'; // Add pointer cursor to indicate clickable
                     box.addEventListener('click', (e) => {
+                        // Only handle clicks on the box itself, not on child elements that might have their own handlers
+                        if (e.target === box || !link.contains(e.target)) {
+                            e.preventDefault();
+                            saveClickCount(articleId);
+                            window.location.href = link.getAttribute('href');
+                        }
+                    });
+                    
+                    // Make sure the link itself still works properly
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
                         saveClickCount(articleId);
                         window.location.href = link.getAttribute('href');
-                        e.preventDefault();
                     });
                 }
             }
