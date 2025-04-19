@@ -119,7 +119,7 @@ async function loadArticles() {
             articleBox.style.gridRow = `span ${height}`;
              
             // Extract the first paragraph from article content
-            const firstParagraph = article.content.split('\n\n')[0];
+            const firstParagraph = window.marked.parse(article.content.split('\n\n')[0]);
             
             // Assign random grid sizes instead of calculating based on content length
             let gridWidth, gridHeight;
