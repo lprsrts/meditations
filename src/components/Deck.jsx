@@ -19,7 +19,7 @@ export default function Deck({ articles }) {
   if (!mounted) {
     return (
       <div className="deck">
-        <div className="site-title">DÜŞÜNCELERİ KAYDETME DÜRTÜSÜNDEKİ</div>
+        <div className="site-title">KENDİME DÜŞÜNCELER</div>
       </div>
     );
   }
@@ -37,7 +37,7 @@ export default function Deck({ articles }) {
           index={i}
         />
       ))}
-      <div className="site-title">DÜŞÜNCELERİ KAYDETME DÜRTÜSÜNDEKİ</div>
+      <div className="site-title">KENDİME DÜŞÜNCELER</div>
     </div>
   );
 }
