@@ -134,10 +134,10 @@ async function loadArticles() {
             } else {
                 // Generate random sizes with weighted probabilities
                 const sizeOptions = [
-                    { width: 1, height: 1, weight: 40 },  // 1x1 (40% chance)
-                    { width: 2, height: 1, weight: 30 },  // 2x1 (30% chance)
-                    { width: 1, height: 2, weight: 20 },  // 1x2 (20% chance)
-                    { width: 2, height: 2, weight: 10 }   // 2x2 (10% chance)
+                    { width: 1, height: 1, weight: 90 },  // 1x1 (90% chance)
+                    { width: 2, height: 1, weight: 6 },  // 2x1 (30% chance)
+                    { width: 1, height: 2, weight: 3 },  // 1x2 (20% chance)
+                    { width: 2, height: 2, weight: 1 }   // 2x2 (10% chance)
                 ];
                 
                 // Create weighted random selection
