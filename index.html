@@ -1,26 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meditasyonlar</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
-</head>
-<body class="light-mode">
-    <header>
-        <h1>Meditasyonlar</h1>
-        <button id="theme-toggle" aria-label="Toggle dark/light mode">
-            <span class="toggle-icon">◐</span>
-        </button>
-    </header>
-    
-    <main class="article-grid">
-        <!-- Article boxes will be dynamically loaded from articles.js -->
-    </main>
+---
+layout: default
+title: Meditasyonlar
+---
 
-    <footer>
-        <p>&copy; 2025 Meditasyonlar</p>
-    </footer>
-</body>
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Meditasyonlar</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script src="script.js" defer></script>
+    </head>
+    <body class="light-mode">
+        <header>
+            <h1>Meditasyonlar</h1>
+            <button id="theme-toggle" aria-label="Toggle dark/light mode">
+                <span class="toggle-icon">◐</span>
+            </button>
+        </header>
+
+        <main class="article-grid">
+            <!-- Article boxes will be dynamically loaded from articles.js -->
+            <ul>
+                {% for article in site.articles %}
+                <li>
+                    <a href="{{ article.url }}">{{ article.title }}</a>
+                    <span>{{ article.date | date: "%b %d, %y" }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Meditasyonlar</p>
+        </footer>
+    </body>
 </html>
