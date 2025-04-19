@@ -117,9 +117,9 @@ async function loadArticles() {
             // Set grid properties based on size
             articleBox.style.gridColumn = `span ${width}`;
             articleBox.style.gridRow = `span ${height}`;
-            
+             
             // Extract the first paragraph from article content
-            const firstParagraph = article.content.split('\n\n')[0]; 
+            const firstParagraph = article.content.split('\n\n')[0];
             
             // Assign random grid sizes instead of calculating based on content length
             let gridWidth, gridHeight;
@@ -212,10 +212,15 @@ async function loadArticlePage() {
         if (articleTitle && articleDate && articleContent) {
             articleTitle.textContent = article.title;
             articleDate.textContent = formatDate(article.date);
-            
-            // Convert markdown-like content to HTML
-            const paragraphs = article.content.split('\n\n');
-            articleContent.innerHTML = paragraphs.map(p => `<p>${p}</p>`).join('');
+
+            // Convert markdown content to HTML using marked.js
+            if (window.marked) {
+                articleContent.innerHTML = window.marked.parse(article.content);
+            } else {
+                // Fallback: simple paragraph split if marked.js is not loaded
+                const paragraphs = article.content.split('\n\n');
+                articleContent.innerHTML = paragraphs.map(p => `<p>${p}</p>`).join('');
+            }
         }
     }
 }
