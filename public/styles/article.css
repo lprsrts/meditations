@@ -9,11 +9,11 @@
 }
 
 .left-col {
-  background-color: var(--white);
+  background-color: var(--background);
 }
 
 .center-col {
-  background-color: var(--background);
+  background-color: var(--white);
   padding: 3rem 2rem;
   border-left: 1px solid rgba(191, 174, 121, 0.2);
   border-right: 1px solid rgba(191, 174, 121, 0.2);

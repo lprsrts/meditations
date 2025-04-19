@@ -6,7 +6,7 @@ import react from '@astrojs/react';
 export default defineConfig({
   integrations: [react()],
   // Setting the site URL to your custom domain
-  site: 'https://saritas.tr',
+  site: 'https://www.saritas.tr',
   // Since we're using a custom domain, base should be '/' instead of '/meditations'
   base: '/',
   trailingSlash: 'ignore',

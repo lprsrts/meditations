@@ -5,7 +5,7 @@ import Card from './Card';
 export default function Deck({ articles }) {
   // Sort articles by date, newest first
   const sortedArticles = [...articles].sort((a, b) => 
-    new Date(b.data.date) - new Date(a.data.date)
+    new Date(a.data.date) - new Date(b.data.date)
   );
 
   return (
@@ -21,7 +21,7 @@ export default function Deck({ articles }) {
           index={i}
         />
       ))}
-      <div className="site-title">DÜŞÜNCELERİ KAYDETME DÜRTÜSÜNDEKİ</div>
+      <div className="site-title">KENDİME DÜŞÜNCELER</div>
     </div>
   );
 }
