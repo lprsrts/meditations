@@ -1,0 +1,24 @@
+---
+// ArticleLayout.astro - simplified layout without top bar and images
+---
+
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DÜŞÜNCELERİ KAYDETME DÜRTÜSÜNDEKİ</title>
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/article.css">
+  </head>
+  <body>
+    <main class="article">
+      <aside class="left-col"></aside>
+      <section class="center-col">
+        <a href="/" class="back-button">← Ana sayfaya dön</a>
+        <slot />
+        <a href="/" class="back-button bottom">← Ana sayfaya dön</a>
+      </section>
+      <aside class="right-col"></aside>
+    </main>
+  </body>
+</html>

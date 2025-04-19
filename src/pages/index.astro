@@ -1,0 +1,21 @@
+---
+import Deck from '../components/Deck';
+import { getCollection } from 'astro:content';
+
+// Get all articles from the content collection
+const articles = await getCollection('articles');
+---
+
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DÜŞÜNCELERİ KAYDETME DÜRTÜSÜNDEKİ</title>
+    <link rel="stylesheet" href="/styles/global.css">
+  </head>
+  <body>
+    <main>
+      <Deck client:load articles={articles} />
+    </main>
+  </body>
+</html>

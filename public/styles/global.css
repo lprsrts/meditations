@@ -1,0 +1,121 @@
+/* Global styles for the website */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --background: #fbf7ef;
+  --card-border: #bfae79;
+  --text-color: #7a5e2c;
+  --white: #ffffff;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  background-color: var(--background);
+  color: var(--text-color);
+  min-height: 100vh;
+}
+
+/* Landing Page Styles */
+.deck {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: var(--background);
+  overflow: hidden;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.site-title {
+  position: fixed;
+  top: 1.5rem;
+  left: 1.5rem;
+  font-size: 1.2rem;
+  color: var(--card-border);
+  z-index: 10;
+  font-weight: normal;
+}
+
+.card {
+  position: absolute;
+  width: 20rem;
+  min-height: 10rem;
+  padding: 1.5rem;
+  border: 1px solid var(--card-border);
+  background: var(--white);
+  cursor: grab;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  user-select: none;
+  touch-action: none;
+}
+
+.card:active {
+  cursor: grabbing;
+}
+
+.card h2 {
+  font-weight: normal;
+  color: var(--text-color);
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-date {
+  font-size: 0.9rem;
+  color: var(--card-border);
+  margin-bottom: 1rem;
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.card-decoration {
+  height: 1px;
+  width: 50%;
+  background-color: var(--card-border);
+  margin-top: auto;
+}
+
+.add-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid var(--card-border);
+  background: transparent;
+  font-size: 1.5rem;
+  color: var(--card-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.add-button:hover {
+  background-color: var(--card-border);
+  color: var(--white);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .site-title {
+    position: absolute;
+    top: 0.7rem;
+    left: 0.7rem;
+    font-size: 1rem;
+  }
+}
