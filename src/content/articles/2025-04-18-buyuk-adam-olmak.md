@@ -3,7 +3,7 @@ title: 'Büyük Adam Olmak'
 date: 2025-04-18
 ---
 
-### Düşünsel Günlük: Büyük Adam Olmak 
+### Düşünsel Günlük: Büyük Adam Olmak
 
 İlk kez fikirlerimi yazıya döktüğümde sarsıcı bir farkındalık yaşadım: “Ne çok şey düşünmüşüm ve ne azını tutabilmişim.” Oysa o anları muhafaza edebilseymişim, geriye dönüp bakabilirdim. İşte bu yazı, tam da böyle bir çabanın ürünü.
 
@@ -27,8 +27,8 @@ Fakat her fikir eskimeye mahkûm. 2025’te ortaya çıkan bir düşünce, 2100�
 
 Yürürken konuşuyorum, eğitilmiş sinir ağları-günümüzün matbaası-ile. Çünkü bir düşünceyi somutlaştırmak istiyorum. “Büyük adam ol.” Bu cümle bazen bir dua gibi yankılanıyor içimde, bazen de ağır bir yük gibi.
 
-Belki de "Büyük adam ol!" diyenler benim büyük adam olup olmadığımı göremeyecek, buna rağmen demeye devam edecekler. Belki ben de büyük adam olup olmadığığmı fark etmeyeceğim. Tıpkı bir yetişkinlik yaşından bahsedemediğimiz gibi... Ama notlarımı bırakacağım. Belki biri okuyacak, belki kimse okumayacak. Ama bu iz, bu çaba kalsın istiyorum.
+Belki de "Büyük adam ol!" diyenler benim büyük adam olup olmadığımı göremeyecek, buna rağmen demeye devam edecekler. Belki ben de büyük adam olup olmadığımı fark etmeyeceğim. Tıpkı bir yetişkin olma yaşından bahsedemediğimiz gibi... Ama notlarımı bırakacağım. Belki biri okuyacak, belki kimse okumayacak. Ama bu iz, bu çaba kalsın istiyorum.
 
-Denizli’den çıktım, şimdi Almanya’da bir şehirde yürürken bunları düşünüyorum. Soruyorum "Nasıl olunuyor bu büyük adam?". Bir yandan da uzmanlaşmak mı diye soruyorum. Ne demiş bir adam: "Bir konuda uzmanlaşmak için on bin saat harcamalısınız." Bilmem kaç yıl önce biri bunu demiş. İşte o adam büyük adam. Çünkü ben şimdi, burada onun sözünü hatırlıyorum-bana bu fikirle karşılaşmamı sağlayan insanlar gibi. Kendisi ölmüş fikri inatçı.
+Denizli’den çıktım, şimdi Almanya’da bir şehirde yürürken bunları düşünüyorum. Soruyorum "Nasıl olunuyor bu büyük adam?". Bir yandan da uzmanlaşmak mı diye düşünüyorum. Ne demiş bir adam: "Bir konuda uzmanlaşmak için on bin saat harcamalısınız." Bilmem kaç yıl önce bunu demiş. İşte o adam büyük adam. Çünkü ben şimdi, burada onun sözünü hatırlıyorum-bana bu fikirle karşılaşmamı sağlayan insanlar gibi. Kendisi ölmüş fikri inatçı.
 
 Sonuçta büyük adamlık, adının bir yerlerde yankılanması da olmamalı sadece. O yankının bir iz bırakması. Ve bazen bu iz, birinin bir gün sabah yürüyüşünde kendi sesini kaydetmesiyle başlar.
