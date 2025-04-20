@@ -5,6 +5,7 @@ import Card from './Card';
 export default function Deck({ articles }) {
   const [mounted, setMounted] = useState(false);
   const [sortedArticles, setSortedArticles] = useState([]);
+  const [centerPoint, setCenterPoint] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     setMounted(true);
@@ -13,6 +14,18 @@ export default function Deck({ articles }) {
       new Date(b.data.date) - new Date(a.data.date)
     );
     setSortedArticles(sorted);
+    
+    // Set center point based on window dimensions
+    const updateCenterPoint = () => {
+      setCenterPoint({
+        x: window.innerWidth / 2,
+        y: window.innerHeight / 2
+      });
+    };
+    
+    updateCenterPoint();
+    window.addEventListener('resize', updateCenterPoint);
+    return () => window.removeEventListener('resize', updateCenterPoint);
   }, [articles]);
 
   // Before hydration is complete, render a simplified version
@@ -26,17 +39,20 @@ export default function Deck({ articles }) {
 
   return (
     <div className="deck">
-      {sortedArticles.map((article, i) => (
-        <Card 
-          key={article.slug}
-          article={{
-            slug: article.slug,
-            title: article.data.title,
-            date: article.data.date
-          }}
-          index={i}
-        />
-      ))}
+      <div className="cards-container" style={{ position: 'absolute', left: centerPoint.x, top: centerPoint.y }}>
+        {sortedArticles.map((article, i) => (
+          <Card 
+            key={article.slug}
+            article={{
+              slug: article.slug,
+              title: article.data.title,
+              date: article.data.date
+            }}
+            index={i}
+            centerPoint={centerPoint}
+          />
+        ))}
+      </div>
       <div className="site-title">KENDİME DÜŞÜNCELER</div>
     </div>
   );
