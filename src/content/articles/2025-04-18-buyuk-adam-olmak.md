@@ -25,7 +25,7 @@ Fakat her fikir eskimeye mahkûm. 2025’te ortaya çıkan bir düşünce, 2100�
 
 #### Büyük Adamlık Yolunda Adımlar
 
-Yürürken konuşuyorum, eğitilmiş sinir ağları-günümüzün matbaası-ile. Çünkü bir düşünceyi somutlaştırmak istiyorum. “Büyük adam ol.” Bu cümle bazen bir dua gibi yankılanıyor içimde, bazen de ağır bir yük gibi.
+Yürürken konuşuyorum, eğitilmiş sinir ağları-günümüzün matbaası-ile de ses kaydımı yazıya dönüştürüyorum. Çünkü bir düşünceyi somutlaştırmak istiyorum. “Büyük adam ol.” Bu cümle bazen bir dua gibi yankılanıyor içimde, bazen de ağır bir yük gibi.
 
 Belki de "Büyük adam ol!" diyenler benim büyük adam olup olmadığımı göremeyecek, buna rağmen demeye devam edecekler. Belki ben de büyük adam olup olmadığımı fark etmeyeceğim. Tıpkı bir yetişkin olma yaşından bahsedemediğimiz gibi... Ama notlarımı bırakacağım. Belki biri okuyacak, belki kimse okumayacak. Ama bu iz, bu çaba kalsın istiyorum.
 
