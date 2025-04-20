@@ -20,4 +20,4 @@ Bu noktada yaş ve algı ilişkisine de değinmek lazım. Bir çocuğun dünyay�
 
 Fakat yine de temelde aynı kalan bir şey var: İnsan, yaşadıklarından etkilenir. Bu etki, bir sonraki davranışını belirler. Bu da bizi yine determinizme getirir. Ancak bu kaçınılmazlık içinde, insanın çabası kaybolmaz. Belki seçimlerimiz tamamen özgür değil ama o seçimleri verirken hissettiklerimiz-biyokimyasal tepkimeler, yaşama dair özgün bir deneyim sunar.
 
-Ve en nihayetinde, bu sessiz yolda yürürken, duyduğumuz ya da duymadığımız her ses, bizi biraz daha şekillendirir. Belki de gerçekten hayat bir ses meselesidir: Kimi zaman içten gelen, kimi zaman dışarıdan bastıran… Ama her zaman bir yankılanan
+Ve en nihayetinde, bu sessiz yolda yürürken, duyduğumuz ya da duymadığımız her ses, bizi biraz daha şekillendirir. Belki de gerçekten hayat bir ses meselesidir: Kimi zaman içten gelen, kimi zaman dışarıdan bastıran ama her zaman yankılanan...
