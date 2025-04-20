@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
 import { useRef } from "react";
 
+// Set the maximum z-index for cards
+const MAX_Z_INDEX = 1000;
+
 // Module-level variable to keep track of the highest z-index among cards
 let highestZIndex = 1;
 
