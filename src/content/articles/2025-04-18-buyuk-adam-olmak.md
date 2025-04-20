@@ -25,10 +25,10 @@ Fakat her fikir eskimeye mahkûm. 2025’te ortaya çıkan bir düşünce, 2100�
 
 #### Büyük Adamlık Yolunda Adımlar
 
-Yürürken konuşuyorum, eğitilmiş sinir ağları-günümüzün matbaası-ile de ses kaydımı yazıya dönüştürüyorum. Çünkü bir düşünceyi somutlaştırmak istiyorum. “Büyük adam olmak.” Bu cümle bazen bir dua gibi yankılanıyor içimde, bazen de ağır bir yük gibi.
+Yürürken konuşuyorum, eğitilmiş sinir ağları--günümüzün matbaası--ile de ses kaydımı yazıya dönüştürüyorum. Çünkü bir düşünceyi somutlaştırmak istiyorum. “Büyük adam olmak.” Bu cümle bazen bir dua gibi yankılanıyor içimde, bazen de ağır bir yük gibi.
 
 Belki de "Büyük adam ol!" diyenler benim büyük adam olup olmadığımı göremeyecek, buna rağmen demeye devam edecekler. Belki ben de büyük adam olup olmadığımı fark etmeyeceğim. Tıpkı bir yetişkin olma yaşından bahsedemediğimiz gibi... Ama notlarımı bırakacağım. Belki biri okuyacak, belki kimse okumayacak. Ama bu iz, bu çaba kalsın istiyorum.
 
-Denizli’den çıktım, şimdi Almanya’da bir şehirde yürürken bunları düşünüyorum. Soruyorum "Nasıl olunuyor bu büyük adam?". Bir yandan da uzmanlaşmak mı diye düşünüyorum. Ne demiş bir adam: "Bir konuda uzmanlaşmak için on bin saat harcamalısınız." Bilmem kaç yıl önce bunu demiş. İşte o adam büyük adam. Çünkü ben şimdi, burada onun sözünü hatırlıyorum-bana bu fikirle karşılaşmamı sağlayan insanlar gibi. Kendisi ölmüş fikri inatçı.
+Denizli’den çıktım, şimdi Almanya’da bir şehirde yürürken bunları düşünüyorum. Soruyorum "Nasıl olunuyor bu büyük adam?". Bir yandan da uzmanlaşmak mı diye düşünüyorum. Ne demiş bir adam: "Bir konuda uzmanlaşmak için on bin saat harcamalısınız." Bilmem kaç yıl önce bunu demiş. İşte o adam büyük adam. Çünkü ben şimdi, burada onun sözünü hatırlıyorum--bana bu fikirle karşılaşmamı sağlayan insanlar gibi. Kendisi ölmüş fikri inatçı.
 
 Sonuçta büyük adamlık, adının bir yerlerde yankılanması da olmamalı sadece. O yankının bir iz bırakması. Ve bazen bu iz, birinin bir gün sabah yürüyüşünde kendi sesini kaydetmesiyle başlar.
