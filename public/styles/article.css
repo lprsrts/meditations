@@ -1,0 +1,121 @@
+/* Article page specific styles */
+
+/* Three-column Layout */
+.article {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 0;
+  min-height: 100vh;
+  transition: background-color 0.3s ease;
+}
+
+.left-col {
+  background-color: var(--background);
+  transition: background-color 0.3s ease;
+}
+
+.center-col {
+  background-color: var(--card-bg);
+  padding: 3rem 2rem;
+  border-left: 1px solid rgba(191, 174, 121, 0.2);
+  border-right: 1px solid rgba(191, 174, 121, 0.2);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.right-col {
+  background-color: var(--background);
+  transition: background-color 0.3s ease;
+}
+
+/* Back Button */
+.back-button {
+  display: inline-block;
+  margin-bottom: 2rem;
+  color: var(--card-border);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.back-button.bottom {
+  margin-top: 3rem;
+  margin-bottom: 0;
+}
+
+.back-button:hover {
+  color: var(--text-color);
+}
+
+/* Article Content Styling */
+.center-col h1 {
+  font-size: 1.8rem;
+  font-weight: normal;
+  color: var(--text-color);
+  margin-bottom: 2rem;
+  transition: color 0.3s ease;
+}
+
+.center-col h2,
+.center-col h3,
+.center-col h4 {
+  color: var(--text-color);
+  font-weight: normal;
+  margin: 1.5rem 0 1rem;
+  transition: color 0.3s ease;
+}
+
+.center-col p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+/* References Section */
+.references {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--card-border);
+  transition: border-color 0.3s ease;
+}
+
+.references h3 {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+  color: var(--card-border);
+  transition: color 0.3s ease;
+}
+
+.references ol {
+  padding-left: 1.5rem;
+}
+
+.references li {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .article {
+    grid-template-columns: 0.5fr 2fr 0.5fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .article {
+    grid-template-columns: 1fr;
+  }
+  
+  .left-col, .right-col {
+    display: none;
+  }
+  
+  .center-col {
+    padding: 2rem 1rem;
+  }
+}

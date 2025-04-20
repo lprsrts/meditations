@@ -1,0 +1,28 @@
+---
+import Deck from '../components/Deck';
+import ThemeToggle from '../components/ThemeToggle';
+import { getCollection } from 'astro:content';
+
+// Get all articles from the content collection
+const articles = await getCollection('articles');
+---
+
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>KENDİME DÜŞÜNCELER</title>
+    <link rel="stylesheet" href="/styles/global.css">
+    <script is:inline>
+      // Initialize with light mode by default
+      document.documentElement.setAttribute('data-theme', 'light');
+      // This will be overridden by the client-side code if there's a saved preference
+    </script>
+  </head>
+  <body>
+    <ThemeToggle client:load />
+    <main>
+      <Deck client:load articles={articles} />
+    </main>
+  </body>
+</html>

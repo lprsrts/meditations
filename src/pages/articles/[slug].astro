@@ -1,0 +1,21 @@
+---
+import { getCollection } from 'astro:content';
+import ArticleLayout from '../../components/ArticleLayout.astro';
+
+// Generate routes for all articles in the collection
+export async function getStaticPaths() {
+  const articleEntries = await getCollection('articles');
+  return articleEntries.map(entry => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<ArticleLayout>
+  <h1>{entry.data.title}</h1>
+  <Content />
+</ArticleLayout>
