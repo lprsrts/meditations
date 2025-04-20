@@ -11,9 +11,14 @@ import ThemeToggle from './ThemeToggle';
     <link rel="stylesheet" href="/styles/global.css">
     <link rel="stylesheet" href="/styles/article.css">
     <script is:inline>
-      // Initialize with light mode by default
-      document.documentElement.setAttribute('data-theme', 'light');
-      // This will be overridden by the client-side code if there's a saved preference
+      // Immediately apply the saved theme to prevent flash
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      } else {
+        // Initialize with light mode by default
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
     </script>
   </head>
   <body>
