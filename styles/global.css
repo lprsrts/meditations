@@ -1,181 +1,190 @@
 /* Global styles for the website */
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 /* Light mode (default) colors */
 :root {
-  --background: #fbf7ef;
-  --card-border: #bfae79;
-  --text-color: #7a5e2c;
-  --white: #ffffff;
-  --card-bg: #ffffff;
-  --toggle-bg: rgba(191, 174, 121, 0.1);
-  --toggle-color: #bfae79;
+    --background: #fbf7ef;
+    --card-border: #bfae79;
+    --text-color: #7a5e2c;
+    --white: #ffffff;
+    --card-bg: #ffffff;
+    --toggle-bg: rgba(191, 174, 121, 0.1);
+    --toggle-color: #bfae79;
 }
 
 /* Dark mode colors */
 [data-theme="dark"] {
-  --background: #1a1a1a;
-  --card-border: #bfae79;
-  --text-color: #d6c69a;
-  --white: #2a2a2a;
-  --card-bg: #2a2a2a;
-  --toggle-bg: rgba(191, 174, 121, 0.2);
-  --toggle-color: #bfae79;
+    --background: #1a1a1a;
+    --card-border: #bfae79;
+    --text-color: #d6c69a;
+    --white: #2a2a2a;
+    --card-bg: #2a2a2a;
+    --toggle-bg: rgba(191, 174, 121, 0.2);
+    --toggle-color: #bfae79;
 }
 
 body {
-  font-family: "Times New Roman", Times, serif;
-  background-color: var(--background);
-  color: var(--text-color);
-  min-height: 100vh;
-  transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: "Times New Roman", Times, serif;
+    background-color: var(--background);
+    color: var(--text-color);
+    min-height: 100vh;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
 }
 
 /* Theme Toggle Button */
 .theme-toggle {
-  position: fixed;
-  top: 1.5rem;
-  right: 1.5rem;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  background-color: var(--toggle-bg);
-  border: 1px solid var(--toggle-color);
-  color: var(--toggle-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-  cursor: pointer;
-  z-index: 1001;
-  transition: all 0.3s ease;
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: var(--toggle-bg);
+    border: 1px solid var(--toggle-color);
+    color: var(--toggle-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 1001;
+    transition: all 0.3s ease;
 }
 
 .theme-toggle:hover {
-  background-color: var(--toggle-color);
-  color: var(--background);
+    background-color: var(--toggle-color);
+    color: var(--background);
 }
 
 /* Landing Page Styles */
 .deck {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  background: var(--background);
-  overflow: hidden;
-  padding: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background-color 0.3s ease;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: var(--background);
+    overflow: hidden;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
 }
 
 .site-title {
-  position: fixed;
-  top: 1.5rem;
-  left: 1.5rem;
-  height: 2.5rem;
-  font-size: 1.2rem;
-  color: var(--card-border);
-  z-index: 10;
-  font-weight: normal;
-  display: flex;
-  align-items: center;
-  transition: color 0.3s ease;
+    position: fixed;
+    top: 1.5rem;
+    left: 1.5rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    color: var(--card-border);
+    z-index: 10;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
 }
 
 .card {
-  position: absolute;
-  width: 20rem;
-  min-height: 10rem;
-  padding: 1.5rem;
-  border: 1px solid var(--card-border);
-  background: var(--card-bg);
-  cursor: grab;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.05);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  user-select: none;
-  touch-action: none;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-
-.card:active {
-  cursor: grabbing;
-}
-
-.card h2 {
-  font-weight: normal;
-  color: var(--text-color);
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
-  transition: color 0.3s ease;
-}
-
-.card-date {
-  font-size: 0.9rem;
-  color: var(--card-border);
-  margin-bottom: 1rem;
-  transition: color 0.3s ease;
+    position: relative;
+    width: 20rem;
+    min-height: 10rem;
+    padding: 1.5rem;
+    border: 1px solid var(--card-border);
+    background: var(--card-bg);
+    cursor: grab;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    user-select: none;
+    touch-action: none;
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease;
 }
 
 .card-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    text-decoration: none;
+    color: var(--card-border);
+    /* Optional: add background and padding if desired */
+    border-color: var(--card-border);
+    padding: 5px 10px;
+}
+
+.card:active {
+    cursor: grabbing;
+}
+
+.card h2 {
+    font-weight: normal;
+    color: var(--text-color);
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.card-date {
+    font-size: 0.9rem;
+    color: var(--card-border);
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
 }
 
 .card-decoration {
-  height: 1px;
-  width: 50%;
-  background-color: var(--card-border);
-  margin-top: auto;
-  transition: background-color 0.3s ease;
+    height: 1px;
+    width: 50%;
+    background-color: var(--card-border);
+    margin-top: auto;
+    transition: background-color 0.3s ease;
 }
 
 .add-button {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  width: 2.5rem;
-  height: 2.5rem;
-  border: 1px solid var(--card-border);
-  background: transparent;
-  font-size: 1.5rem;
-  color: var(--card-border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 1000;
-  transition: all 0.3s ease;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid var(--card-border);
+    background: transparent;
+    font-size: 1.5rem;
+    color: var(--card-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease;
 }
 
 .add-button:hover {
-  background-color: var(--card-border);
-  color: var(--background);
+    background-color: var(--card-border);
+    color: var(--background);
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .site-title {
-    position: absolute;
-    top: 0.7rem;
-    left: 0.7rem;
-    height: 2rem;
-    font-size: 1rem;
-  }
-  
-  .theme-toggle {
-    top: 0.7rem;
-    right: 0.7rem;
-    width: 2rem;
-    height: 2rem;
-    font-size: 1rem;
-  }
+    .site-title {
+        position: absolute;
+        top: 0.7rem;
+        left: 0.7rem;
+        height: 2rem;
+        font-size: 1rem;
+    }
+
+    .theme-toggle {
+        top: 0.7rem;
+        right: 0.7rem;
+        width: 2rem;
+        height: 2rem;
+        font-size: 1rem;
+    }
 }
