@@ -31,6 +31,9 @@ export default function Card({ article, index }) {
       dragMomentum={false}
       onDragStart={(e) => {
         highestZIndex++;
+        if (highestZIndex > MAX_Z_INDEX) {
+          highestZIndex = 1; // Reset to base value
+        }
         // Always update the style via currentTarget or use cardRef as a fallback
         const target = e.currentTarget || cardRef.current;
         if (target) {
