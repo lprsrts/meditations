@@ -2,10 +2,15 @@ import { useState, useEffect, useContext, createContext } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Card from './Card';
 
+// Store z-indices in localStorage for persistence between hot reloads
+const ZINDEX_STORAGE_KEY = 'cardZIndices';
+
 // Create a context to share z-index state across cards
 export const CardZIndexContext = createContext({
   updateZIndex: () => {},
-  totalCards: 0
+  totalCards: 0,
+  hoveredCard: null,
+  setHoveredCard: () => {}
 });
 
 export default function Deck({ articles }) {
@@ -18,7 +23,11 @@ export default function Deck({ articles }) {
   
   // Keep track of all card z-indices
   const [zIndices, setZIndices] = useState({});
+  
+  // Track the currently hovered card
+  const [hoveredCard, setHoveredCard] = useState(null);
 
+  // Initialize and store z-indices
   useEffect(() => {
     setMounted(true);
     // Sort articles by date, newest first
@@ -27,11 +36,36 @@ export default function Deck({ articles }) {
     );
     setSortedArticles(sorted);
     
-    // Initialize z-indices - newer articles on top
-    const initialZIndices = {};
-    sorted.forEach((article, index) => {
-      initialZIndices[article.slug] = sorted.length - index; // Newest has highest z-index
-    });
+    // Try to load z-indices from localStorage first (for HMR persistence)
+    let initialZIndices = {};
+    try {
+      const savedIndices = localStorage.getItem(ZINDEX_STORAGE_KEY);
+      if (savedIndices) {
+        const parsed = JSON.parse(savedIndices);
+        // Make sure all current articles have z-indices
+        let valid = true;
+        sorted.forEach(article => {
+          if (!(article.slug in parsed)) {
+            valid = false;
+          }
+        });
+        
+        if (valid) {
+          initialZIndices = parsed;
+          console.log("Restored z-indices from storage");
+        }
+      }
+    } catch (e) {
+      console.warn("Error loading z-indices", e);
+    }
+    
+    // If we don't have valid saved z-indices, initialize fresh ones
+    if (Object.keys(initialZIndices).length === 0) {
+      sorted.forEach((article, index) => {
+        initialZIndices[article.slug] = sorted.length - index; // Newest has highest z-index
+      });
+    }
+    
     setZIndices(initialZIndices);
     
     // Set center point and safe radius based on window dimensions
@@ -52,7 +86,7 @@ export default function Deck({ articles }) {
     // Delay showing cards to let visitor see the title
     const timer = setTimeout(() => {
       setShowCards(true);
-    }, 2000); // 1.5 second delay
+    }, 1800); // 1.8 second delay
     
     return () => {
       window.removeEventListener('resize', updateDimensions);
@@ -60,8 +94,22 @@ export default function Deck({ articles }) {
     };
   }, [articles]);
 
+  // Save z-indices to localStorage whenever they change
+  useEffect(() => {
+    if (Object.keys(zIndices).length > 0) {
+      try {
+        localStorage.setItem(ZINDEX_STORAGE_KEY, JSON.stringify(zIndices));
+      } catch (e) {
+        console.warn("Error saving z-indices", e);
+      }
+    }
+  }, [zIndices]);
+
   // Function to update z-index when a card is clicked/dragged
   const updateZIndex = (slug) => {
+    // Clear hovered card state when a card is clicked/dragged
+    setHoveredCard(null);
+    
     setZIndices(prevZIndices => {
       const newZIndices = { ...prevZIndices };
       const selectedCardZIndex = prevZIndices[slug];
@@ -103,7 +151,12 @@ export default function Deck({ articles }) {
   }
 
   return (
-    <CardZIndexContext.Provider value={{ updateZIndex, totalCards: sortedArticles.length }}>
+    <CardZIndexContext.Provider value={{ 
+      updateZIndex, 
+      totalCards: sortedArticles.length,
+      hoveredCard,
+      setHoveredCard
+    }}>
       <div className="deck">
         <motion.div 
           className="site-title"
@@ -168,6 +221,7 @@ export default function Deck({ articles }) {
             <p>Center: {centerPoint.x.toFixed(0)}px, {centerPoint.y.toFixed(0)}px</p>
             <p>Safe Radius: {safeRadius.toFixed(0)}px</p>
             <p>Cards: {sortedArticles.length}</p>
+            <p>Hovered: {hoveredCard || 'None'}</p>
             {debugMode && (
               <div>
                 <p>Z-Indices:</p>

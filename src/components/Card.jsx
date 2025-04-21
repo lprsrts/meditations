@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { easeInOut, motion } from "framer-motion";
 import { useRef, useState, useEffect, useContext } from "react";
 import { CardZIndexContext } from "./Deck";
 
@@ -29,7 +29,10 @@ export default function Card({ article, index, safeRadius = 200, debugMode, zInd
   const cardRef = useRef(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [distancePercent, setDistancePercent] = useState(0);
-  const { updateZIndex } = useContext(CardZIndexContext);
+  const [isHovered, setIsHovered] = useState(false);
+  
+  // Use global context for hovered card state
+  const { updateZIndex, totalCards, hoveredCard, setHoveredCard } = useContext(CardZIndexContext);
 
   // Format the date in Turkish locale
   const formatDate = (dateString) => {
@@ -42,17 +45,9 @@ export default function Card({ article, index, safeRadius = 200, debugMode, zInd
   
   // Generate position using a true circular normal distribution
   useEffect(() => {
-    // Use Box-Muller transform for proper 2D normal distribution
-    // Generate random distance from center with normal distribution
-    const distance = Math.abs(randomGaussian(0, safeRadius / 2));
-    
-    // Generate random angle (uniform across 0-2π)
+    const distance = Math.abs(randomGaussian(0, safeRadius / 4));
     const angle = Math.random() * 2 * Math.PI;
-    
-    // Convert to cartesian coordinates
     const coords = sphericalToCartesian(distance, angle);
-    
-    // Ensure cards stay within safe radius
     const clampedDist = clamp(distance, 0, safeRadius);
     const clampedCoords = sphericalToCartesian(clampedDist, angle);
     
@@ -60,9 +55,31 @@ export default function Card({ article, index, safeRadius = 200, debugMode, zInd
     setDistancePercent(Math.round((clampedDist / safeRadius) * 100));
   }, [safeRadius]);
 
-  // Handle card interaction - update z-index
+  // Handle mouse enter - bring card to front temporarily
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+    setHoveredCard(article.slug);
+  };
+
+  // Handle mouse leave - restore original z-index
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+    if (hoveredCard === article.slug) {
+      setHoveredCard(null);
+    }
+  };
+
+  // Handle card interaction - permanently update z-index
   const handleInteraction = () => {
     updateZIndex(article.slug);
+  };
+
+  // Calculate the effective z-index for this card based on hover state and system state
+  const effectiveZIndex = () => {
+    if (hoveredCard === article.slug) {
+      return totalCards + 1000; // Temporarily on top
+    }
+    return zIndex;
   };
 
   // Deterministic rotation to avoid hydration mismatches
@@ -71,11 +88,15 @@ export default function Card({ article, index, safeRadius = 200, debugMode, zInd
   return (
     <motion.div
       ref={cardRef}
-      className="card"
+      className={`card ${isHovered ? 'card-hovered' : ''}`}
       drag
       dragMomentum={false}
       onDragStart={handleInteraction}
       onClick={handleInteraction}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      onTouchStart={handleMouseEnter} 
+      onTouchEnd={handleMouseLeave}
       initial={{ 
         opacity: 0, 
         scale: 0,
@@ -102,7 +123,7 @@ export default function Card({ article, index, safeRadius = 200, debugMode, zInd
         top: "50%",
         marginLeft: "-140px", // Half the card width (280/2)
         marginTop: "-60px",   // Half the card height (120/2)
-        zIndex: zIndex
+        zIndex: effectiveZIndex()
       }}
     >
       <div className="card-content">
@@ -129,7 +150,7 @@ export default function Card({ article, index, safeRadius = 200, debugMode, zInd
           borderRadius: "2px",
           pointerEvents: "none"
         }}>
-          z:{zIndex} d:{distancePercent}%
+          z:{zIndex} {hoveredCard === article.slug ? "H" : ""} d:{distancePercent}%
         </div>
       )}
     </motion.div>
