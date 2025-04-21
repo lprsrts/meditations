@@ -93,9 +93,10 @@ export default function Card({ article, index, safeRadius = 200, debugMode, zInd
     marginLeft: "-140px", // Half the card width (280/2)
     marginTop: "-60px",   // Half the card height (120/2)
     zIndex: effectiveZIndex(),
+    // Use CSS variables for theme-sensitive shadows
     boxShadow: isHovered 
-      ? "0 5px 15px rgba(0, 0, 0, 0.4)" 
-      : "2px 2px 10px rgba(0, 0, 0, 0.05)",
+      ? "0 5px 15px var(--shadow-color-hover)" 
+      : "2px 2px 10px var(--shadow-color)",
     transition: "box-shadow 0.3s ease-in-out, background-color 0.3s ease, border-color 0.3s ease"
   };
 
