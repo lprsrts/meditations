@@ -1,4 +1,4 @@
-import { easeInOut, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useRef, useState, useEffect, useContext } from "react";
 import { CardZIndexContext } from "./Deck";
 
