@@ -85,6 +85,20 @@ export default function Card({ article, index, safeRadius = 200, debugMode, zInd
   // Deterministic rotation to avoid hydration mismatches
   const rotation = ((index % 3) - 1) * 5; // Either -5, 0, or 5 degrees
 
+  // Custom styles for consistent shadow behavior across environments
+  const cardStyle = {
+    position: "absolute",
+    left: "50%", 
+    top: "50%",
+    marginLeft: "-140px", // Half the card width (280/2)
+    marginTop: "-60px",   // Half the card height (120/2)
+    zIndex: effectiveZIndex(),
+    boxShadow: isHovered 
+      ? "0 5px 15px rgba(0, 0, 0, 0.4)" 
+      : "2px 2px 10px rgba(0, 0, 0, 0.05)",
+    transition: "box-shadow 0.3s ease-in-out, background-color 0.3s ease, border-color 0.3s ease"
+  };
+
   return (
     <motion.div
       ref={cardRef}
@@ -117,14 +131,7 @@ export default function Card({ article, index, safeRadius = 200, debugMode, zInd
         damping: 15,
         stiffness: 150
       }}
-      style={{ 
-        position: "absolute",
-        left: "50%", 
-        top: "50%",
-        marginLeft: "-140px", // Half the card width (280/2)
-        marginTop: "-60px",   // Half the card height (120/2)
-        zIndex: effectiveZIndex()
-      }}
+      style={cardStyle}
     >
       <div className="card-content">
         <h2>{article.title}</h2>
