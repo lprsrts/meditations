@@ -3,7 +3,7 @@ title: 'Kitabın Azı Zarar'
 date: 2025-04-22
 ---
 
-Kitap okumanın erdem olduğu yaygın bir inançtır. Oysa erken dönemde, yeterli bir sorgulama süreci geçirmeden edinilen fikirler, bireyin düşünce dünyasını biçimlendirir ve sınırlar. Bu makalede, “*okumanın azı zarar*” üzerine bir bakış açısı sunarak, bilgi edinme sürecimizi nasıl yeniden kurgulayabileceğimizi ele alacağız.
+Kitap okumanın erdem olduğu yaygın bir inançtır. Oysa erken dönemde, yeterli bir sorgulama süreci geçirmeden edinilen fikirler, bireyin düşünce dünyasını biçimlendirir ve sınırlar.
 
 ### İlk Fikirlerin Tehlikesi: Bilgi Bombardımanı ve Dogma
 
