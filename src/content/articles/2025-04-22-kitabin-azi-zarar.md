@@ -1,5 +1,5 @@
 ---
-title: 'Kitabın Azı Zarar'
+title: 'Kitabın Azı, Zarar'
 date: 2025-04-22
 ---
 
