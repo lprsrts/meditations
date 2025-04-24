@@ -3,6 +3,8 @@ title: 'Kitabın Azı, Zarar'
 date: 2025-04-22
 ---
 
+### Düşünsel Günlük: En Doğal Öğrenme, Kendiliğinden Olandır
+
 Kitap okumanın erdem olduğu yaygın bir inançtır. Oysa erken dönemde, yeterli bir sorgulama süreci geçirmeden edinilen fikirler, bireyin düşünce dünyasını biçimlendirir ve sınırlar.
 
 ### İlk Fikirlerin Tehlikesi: Bilgi Bombardımanı ve Dogma

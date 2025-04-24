@@ -3,17 +3,17 @@ title: 'Büyük Adam Olmak'
 date: 2025-04-18
 ---
 
-### Düşünsel Günlük: Büyük Adam Olmak
+### Düşünsel Günlük: Fikirler ve Anlam Arayışımı Kaydediyorum
 
 İlk kez fikirlerimi yazıya döktüğümde sarsıcı bir farkındalık yaşadım: “Ne çok şey düşünmüşüm ve ne azını tutabilmişim.” Oysa o anları muhafaza edebilseymişim, geriye dönüp bakabilirdim. İşte bu yazı, tam da böyle bir çabanın ürünü.
 
-#### Neden Kayıt Alıyorum?
+### Neden Kayıt Alıyorum?
 
 Kayıt almaya başlamamın sebebi, düşüncelerimin uçuculuğuyla yüzleşmem. Kafamda dönüp duran fikirler; algılarımın, gözlemlerimin, hayretimin sonucu olarak belirdi. “Vay be,” dedim kendi kendime. “Nasıl da anlıyorum, nasıl da ilerliyorum.” Bir iç ses yankılandı: “Bari kayıt al da büyük adam olasın.”
 
 İnsanların çocukluğumdan beri söylediği bir söz var: “Büyük adam olacaksın.” Buradaki “büyük adam”, bir başbakan, bir bilim insanı olmamalı sadece. O, bir kavram. Ünle, tanınırlıkla, etkileyicilikle ilgili bir kavram. İnsanların seni tanıması, senin varlığını fark etmesi. “Alper” dendiğinde bir şeylerin çağrışması.
 
-#### Büyük Adamlık ve Ün Arayışı
+### Büyük Adamlık ve Ün Arayışı
 
 Ün, sadece şöhret değildir. Bir isimle birlikte gelen duygu, fikir ve imgeler bütünüdür. Tıpkı “çiçek” ya da “böcek” kelimesinin herkeste bir şeyler uyandırması gibi, bir insan adı da onun hayatındaki izlerle bütünleşir. O kelimeyi bir insanı çağrıştırdığı için değil bir şeyi temsil ettiği için söylüyoruz: “Einstein”, “Tesla”, “Newton”, “Marx”, “Lenin”, “Che Guevara”, “Gandhi”, “Mozart”, “Picasso”, “Van Gogh”, “Da Vinci”, “Steve Jobs”, “Bill Gates”, “Freud”, “Darwin”, “Stephen Hawking”, “Alan Turing”, “Churchill”, “Napolyon”, “Julius Caesar”, “Mevlânâ”, “Fatih Sultan Mehmet”, “Atatürk“, “Martin Luther King”, “Nelson Mandela”, “Mother Teresa”, “Galileo”, “Platon”, “Sokrates”, “Aristoteles”, “Kafka”, “Dostoyevski”, “Shakespeare”, “Tolstoy”, “Alfred Nobel”, “Marie Curie”, “Pasteur”, “Salahaddin Eyyubi”, “Copernicus”, “Pablo Escobar”, “Muhammed Ali”, “Mike Tyson”, “Michael Jackson”, “Elvis Presley”, “Madonna”, “Lady Gaga”, “Cristiano Ronaldo”, “Lionel Messi”, “Michael Jordan”, “Kobe Bryant”, “Bruce Lee”, “Mark Zuckerberg”, “Jeff Bezos”, “Elon Musk”, “Isaac Asimov”, “George Orwell”, “Aldous Huxley”, “J.R.R. Tolkien”, “J.K. Rowling”, “Stanley Kubrick”, “Christopher Nolan”, “Quentin Tarantino”, “Beethoven”, “Bach”, “Vivaldi”, “Stephen King”, “Hitchcock”, “Kubrick”, “Marie Antoinette”, “Kleopatra”, “Buddha”, “Konfüçyüs”, “Jesus Christus”, “Muhammed”, “Michelangelo”, “Süleyman Demirel”, “Angela Merkel”, “John F. Kennedy”, “Abraham Lincoln”, “Donald Trump”, “Barack Obama”, “Putin”, “Chopin”, “Tolkien”, “Hemingway”...
 
@@ -23,7 +23,7 @@ Ama bu arayış, aynı zamanda bir boşluk hissinin de ürünüdür. Kaybolmuşl
 
 Fakat her fikir eskimeye mahkûm. 2025’te ortaya çıkan bir düşünce, 2100’de *“modası geçmiş”* sayılmalı ki fikirler tazelenmeli, yeniden düşünülmeli. Bu yüzden, fikirler çatışıyor, yani savaşlar—ister ideolojik ister fiziksel—ilerlemeyi tetikliyor. Çünkü durağanlık gericiliktir; hareket, değişimdir.
 
-#### Büyük Adamlık Yolunda Adımlar
+### Büyük Adamlık Yolunda Adımlar
 
 Yürürken konuşuyorum, eğitilmiş sinir ağları--günümüzün matbaası--ile de ses kaydımı yazıya dönüştürüyorum. Çünkü bir düşünceyi somutlaştırmak istiyorum. “Büyük adam olmak.” Bu cümle bazen bir dua gibi yankılanıyor içimde, bazen de ağır bir yük gibi.
 
