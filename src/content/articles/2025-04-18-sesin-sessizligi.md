@@ -4,7 +4,7 @@ date: 2025-04-18
 ---
 ### Düşünsel Günlük: Çevre, İnsan ve Determinizm Üzerine Bir Yürüyüş
 
-Hafif nemli bir hava, yolun iki yanında ışıkla yıkanmış ağaçlar… Bir sessizlik var burada. Ne motor gürültüsü, ne de telaşlı adımlar. Şehirde alıştığımız uğultular yerini dinginliğe bırakmış. İlk bakışta bu sessizlik huzur gibi geliyor. Ama belki de bu bir eksikliktir, ya da en azından bazıları için öyle hissedilir. Çünkü insan, alıştığı ortamın seslerine bağlanır-onu kötü ya da iyi anar. Gürültünün kendisi değil belki ama ona eşlik eden yaşamın canlılığı çekici olabilir.
+Hafif nemli bir hava, yolun iki yanında ışıkla yıkanmış ağaçlar… Bir sessizlik var burada. Ne motor gürültüsü ne de telaşlı adımlar. Şehirde alıştığımız uğultular yerini dinginliğe bırakmış. İlk bakışta bu sessizlik huzur gibi geliyor. Ama belki de bu bir eksikliktir, ya da en azından bazıları için öyle hissedilir. Çünkü insan, alıştığı ortamın seslerine bağlanır-onu kötü ya da iyi anar. Gürültünün kendisi değil belki ama ona eşlik eden yaşamın canlılığı çekici olabilir.
 
 Bir başka şehirde, İzmir’de olsak, ses eksik olmazdı. Korna, fren, motor, bağırış… Kimi zaman yorucu, kimi zaman sinir bozucu ama inkar edilemez şekilde “canlı”. Çevre, sadece fiziksel değil, duygusal da bir bağ kurar insanla. Nerede doğduğun, nerede büyüdüğün, neye alıştığın… Bunlar senin duyularını, hatta fikirlerini biçimlendirir.
 
