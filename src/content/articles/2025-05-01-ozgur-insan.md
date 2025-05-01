@@ -24,4 +24,3 @@ Bugün dünyada yaklaşık sekiz milyar insan var. Yüz yıl sonra bugünün tü
 Hayatımızın kısa olması, anlamın göreceli bir kavram olması gerçeğini değiştirmiyor. Yaşamı anlamlı kıldıran şeylerden bir tanesi, insanoğlunun kendisine atfettiği değerlerdir. Bu belirsizlik içinde hayatın sunduğu imkânları değerlendirmekten başka bir seçeneğimiz yok. Her ne kadar anlamsız olduğunu hissetsek de, hayatı yaşamak için nefes almak, su içmek, yemek yemek, oyun oynamak, ders çalışmak ve film izlemek gibi basit eylemlerle yetinmeliyiz.
 
 Sonuç olarak, özgür bir iradeden söz etmek mümkün değil. İrade, yaşamın karmaşık yapısının bir parçasıdır ve tüm kararlarımız bu karmaşıklık içinde şekillenmektedir. Bu kabul, hayatın değerini azaltmaz; aksine onu daha gerçekçi ve merak uyandırıcı yapar. Bu yüzden takmayalım ve keyfimize bakalım.
-
