@@ -14,10 +14,10 @@
     --color-neutral: #748D92;  /* Grayish teal */
     --color-light: #D3D9D4;    /* Light gray with hint of green */
     
-    /* Font families */
-    --font-display: 'Playfair Display', Georgia, serif;  /* Elegant serif for headlines */
-    --font-article: 'Spectral', 'Charter', 'Bitstream Charter', 'Sitka Text', Cambria, serif;  /* Readable serif for articles */
-    --font-ui: 'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;  /* Clean sans for UI */
+  /* Font families */
+  --font-display: 'Playfair Display', Georgia, serif;  /* Elegant serif for headlines */
+  --font-article: 'Spectral', 'Charter', 'Bitstream Charter', 'Sitka Text', Cambria, serif;  /* Readable serif for articles */
+  --font-ui: 'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;  /* Clean sans for UI */
     
     /* Don't modify below - these are derived automatically from the palette above */
     --background: var(--color-light);
@@ -64,11 +64,8 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Theme Toggle Button - Updated to match homepage style */
+/* Theme Toggle Button - Updated to be part of navbar */
 .theme-toggle {
-    position: fixed;
-    top: 1rem;
-    right: 5rem;
     background: none;
     border: none;
     cursor: pointer;
@@ -81,7 +78,6 @@ body {
     height: 40px;
     color: var(--toggle-color);
     transition: background-color 0.3s ease;
-    z-index: 1001;
 }
 
 .theme-toggle:hover {
@@ -90,15 +86,15 @@ body {
 
 @media (max-width: 768px) {
     .theme-toggle {
-        top: 0.8rem;
-        right: 4rem;
+        width: 36px;
+        height: 36px;
     }
 }
 
-/* Navbar Styles - Added to match homepage */
+/* Navbar Styles - Updated to match homepage */
 .navbar {
     display: flex;
-    justify-content: center; /* Center the content */
+    justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
     position: fixed;
@@ -108,13 +104,13 @@ body {
     z-index: 10;
     backdrop-filter: blur(10px);
     background-color: var(--navbar-bg);
-    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 10px var(--shadow-color);
     transition: background-color 0.3s ease;
 }
 
 .logo {
     font-family: var(--font-display);
-    font-weight: 600;
+    font-weight: 500;
     font-size: 1.2rem;
     color: var(--text-color);
     transition: color 0.3s ease;
@@ -124,6 +120,41 @@ body {
     display: flex;
     gap: 2rem;
     align-items: center;
+}
+
+.nav-link {
+    font-family: var(--font-ui);
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+    padding: 0.3rem 0;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link.coming-soon {
+    opacity: 0.7;
+    cursor: default;
+}
+
+.nav-link.coming-soon:hover::after {
+    width: 0;
 }
 
 .home-link {
