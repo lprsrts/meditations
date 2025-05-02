@@ -25,4 +25,4 @@ Hayatımızın kısa olması, anlamının göreceli bir kavram olması gerçeği
 
 Sonuç olarak, özgür bir iradeden söz etmek mümkün değil. İrade, yaşamın karmaşık yapısının bir parçasıdır ve tüm kararlarımız bu karmaşıklık içinde şekillenmektedir. Bu kabul, hayatın değerini azaltmaz; aksine onu daha gerçekçi ve merak uyandırıcı yapar. Bu yüzden takmayalım ve keyfimize bakalım.
 
-> “Hayat kısa ve karmaşık, kimse ne yapılacağını bilmiyor. O yüzden fazla bir şey yapma. Rahat ol, arkadaşlarınla takıl ve mümkün olduğunca kendine ve başkalarına dürüst ol—-yani sakin kal.” -- Dudely Lama
+> “Hayat kısa ve karmaşık, kimse ne yapılacağını bilmiyor. O yüzden fazla bir şey yapma. Rahat ol, arkadaşlarınla takıl ve mümkün olduğunca kendine ve başkalarına dürüst ol--yani sakin kal.” -- Dudely Lama
