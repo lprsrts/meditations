@@ -5,65 +5,151 @@
     padding: 0;
 }
 
-/* Light mode (default) colors */
+/* Font system - complementary fonts for different sections */
 :root {
-    --background: #fbf7ef;
-    --card-border: #bfae79;
-    --text-color: #7a5e2c;
+    /* Main color palette - Change these values to update the entire site */
+    --color-dark: #212A31;     /* Very dark blue/gray */
+    --color-medium: #2E3944;   /* Dark blue/gray */
+    --color-accent: #124E66;   /* Teal blue */
+    --color-neutral: #748D92;  /* Grayish teal */
+    --color-light: #D3D9D4;    /* Light gray with hint of green */
+    
+    /* Font families */
+    --font-display: 'Playfair Display', Georgia, serif;  /* Elegant serif for headlines */
+    --font-article: 'Spectral', 'Charter', 'Bitstream Charter', 'Sitka Text', Cambria, serif;  /* Readable serif for articles */
+    --font-ui: 'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;  /* Clean sans for UI */
+    
+    /* Don't modify below - these are derived automatically from the palette above */
+    --background: var(--color-light);
+    --card-border: var(--color-neutral);
+    --text-color: var(--color-dark);
     --white: #ffffff;
-    --card-bg: #ffffff;
-    --toggle-bg: rgba(191, 174, 121, 0.1);
-    --toggle-color: #bfae79;
-    --shadow-color: rgba(0, 0, 0, 0.1);
-    --shadow-color-hover: rgba(0, 0, 0, 0.35);
+    --card-bg: rgba(211, 217, 212, 0.8); /* Transparent light */
+    --toggle-bg: rgba(116, 141, 146, 0.2); /* Transparent neutral */
+    --toggle-color: var(--color-dark);
+    --shadow-color: rgba(33, 42, 49, 0.1); /* Transparent dark */
+    --shadow-color-hover: rgba(33, 42, 49, 0.2); /* Darker shadow */
+    --accent-color: var(--color-accent);
+    --card-text: var(--color-medium);
+    --navbar-bg: rgba(211, 217, 212, 0.8); /* Transparent light */
 }
 
-/* Dark mode colors */
+/* Dark mode colors - Automatically derived from the palette */
 [data-theme="dark"] {
-    --background: #1a1a1a;
-    --card-border: #bfae79;
-    --text-color: #d6c69a;
-    --white: #2a2a2a;
-    --card-bg: #2a2a2a;
-    --toggle-bg: rgba(191, 174, 121, 0.2);
-    --toggle-color: #bfae79;
-    --shadow-color: rgba(255, 255, 255, 0.05);
-    --shadow-color-hover: rgba(255, 255, 255, 0.25);
+    --background: var(--color-dark);
+    --card-border: var(--color-neutral);
+    --text-color: var(--color-light);
+    --white: var(--color-medium);
+    --card-bg: rgba(33, 42, 49, 0.7); /* Transparent dark */
+    --toggle-bg: rgba(116, 141, 146, 0.2); /* Transparent neutral */
+    --toggle-color: var(--color-light);
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --shadow-color-hover: rgba(0, 0, 0, 0.4);
+    --accent-color: var(--color-accent);
+    --card-text: var(--color-neutral);
+    --navbar-bg: rgba(33, 42, 49, 0.8); /* Transparent dark */
 }
 
 body {
-    font-family: "Times New Roman", Times, serif;
+    font-family: var(--font-ui);
     background-color: var(--background);
     color: var(--text-color);
     min-height: 100vh;
     transition:
         background-color 0.3s ease,
         color 0.3s ease;
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-/* Theme Toggle Button */
+/* Theme Toggle Button - Updated to match homepage style */
 .theme-toggle {
     position: fixed;
-    top: 1.5rem;
-    right: 1.5rem;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
-    background-color: var(--toggle-bg);
-    border: 1px solid var(--toggle-color);
-    color: var(--toggle-color);
+    top: 1rem;
+    right: 5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.8rem;
-    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    color: var(--toggle-color);
+    transition: background-color 0.3s ease;
     z-index: 1001;
-    transition: all 0.3s ease;
 }
 
 .theme-toggle:hover {
-    background-color: var(--toggle-color);
-    color: var(--background);
+    background-color: var(--toggle-bg);
+}
+
+@media (max-width: 768px) {
+    .theme-toggle {
+        top: 0.8rem;
+        right: 4rem;
+    }
+}
+
+/* Navbar Styles - Added to match homepage */
+.navbar {
+    display: flex;
+    justify-content: center; /* Center the content */
+    align-items: center;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+    background-color: var(--navbar-bg);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.logo {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.home-link {
+    font-family: var(--font-ui);
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+    padding: 0.3rem 0;
+}
+
+.home-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+.home-link:hover::after {
+    width: 100%;
 }
 
 /* Landing Page Styles */
@@ -74,6 +160,7 @@ body {
     background: var(--background);
     overflow: hidden;
     padding: 2rem;
+    padding-top: 5rem; /* Add padding for navbar */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,6 +188,7 @@ body {
     justify-content: space-between;
     user-select: none;
     touch-action: none;
+    backdrop-filter: blur(10px);
     transition:
         background-color 0.3s ease,
         border-color 0.3s ease,
@@ -109,7 +197,8 @@ body {
 }
 
 .card-hovered {
-    box-shadow: 0 5px 15px var(--shadow-color-hover);
+    box-shadow: 0 10px 20px var(--shadow-color-hover);
+    transform: translateY(-5px);
 }
 
 .card-content {
@@ -120,9 +209,10 @@ body {
 }
 
 .card h2 {
-    font-weight: normal;
+    font-family: var(--font-display);
+    font-weight: 500;
     color: var(--text-color);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 0.3rem;
     transition: color 0.3s ease;
     white-space: nowrap;
@@ -131,13 +221,19 @@ body {
 }
 
 .card-link {
+    font-family: var(--font-ui);
     position: absolute;
     bottom: 8px;
     right: 10px;
     text-decoration: none;
-    color: var(--card-border);
+    color: var(--accent-color);
     padding: 3px 8px;
     font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.card-link:hover {
+    color: var(--text-color);
 }
 
 .card:active {
@@ -145,8 +241,9 @@ body {
 }
 
 .card-date {
+    font-family: var(--font-ui);
     font-size: 0.8rem;
-    color: var(--card-border);
+    color: var(--card-text);
     margin-bottom: 0.5rem;
     transition: color 0.3s ease;
 }
@@ -159,43 +256,42 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.add-button {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    width: 2.5rem;
-    height: 2.5rem;
-    border: 1px solid var(--card-border);
-    background: transparent;
-    font-size: 1.5rem;
-    color: var(--card-border);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 1000;
-    transition: all 0.3s ease;
-}
-
-.add-button:hover {
-    background-color: var(--card-border);
-    color: var(--background);
-}
-
 .site-title {
+    font-family: var(--font-display);
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    color: var(--card-border);
+    color: var(--accent-color);
     z-index: 0;
-    font-weight: normal;
-    font-size: 1.5rem;
+    font-weight: 600;
+    font-size: 1.8rem;
     text-align: center;
     pointer-events: none;
     transition: color 0.3s ease;
     width: 80%;
     max-width: 600px;
+}
+
+/* Background styles */
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: var(--background);
+    transition: background-color 0.3s ease;
+}
+
+.gradient-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
 }
 
 /* Responsive adjustments */
@@ -204,11 +300,25 @@ body {
         font-size: 1.5rem;
     }
 
-    .theme-toggle {
-        top: 0.7rem;
-        right: 0.7rem;
-        width: 2.5rem;
-        height: 2.5rem;
-        font-size: 1.8rem;
+    .navbar {
+        padding: 0.8rem 1rem;
+    }
+    
+    .logo {
+        font-size: 1rem;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        gap: 0.5rem;
+    }
+    
+    .home-link {
+        font-size: 0.85rem;
     }
 }
