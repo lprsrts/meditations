@@ -31,8 +31,6 @@ export default function Navbar() {
         <motion.a 
           href="https://alpersaritas.com" 
           className="nav-link"
-          target="_blank"
-          rel="noopener noreferrer"
           whileHover={{ y: -2 }}
           transition={{ type: "spring", stiffness: 300 }}
         >
