@@ -113,17 +113,26 @@ export default function Deck({ articles }) {
     setZIndices(prevZIndices => {
       const newZIndices = { ...prevZIndices };
       const selectedCardZIndex = prevZIndices[slug];
+      const maxZIndex = sortedArticles.length;
       
-      // Adjust other cards' z-indices
-      Object.keys(newZIndices).forEach(cardSlug => {
-        if (cardSlug !== slug && newZIndices[cardSlug] > selectedCardZIndex) {
-          // Push down cards that were above the selected one
-          newZIndices[cardSlug]--;
-        }
-      });
+      // Only update if card isn't already at the top
+      if (selectedCardZIndex < maxZIndex) {
+        // Adjust other cards' z-indices
+        Object.keys(newZIndices).forEach(cardSlug => {
+          if (cardSlug !== slug && newZIndices[cardSlug] > selectedCardZIndex) {
+            // Push down cards that were above the selected one
+            newZIndices[cardSlug]--;
+          }
+        });
+        
+        // Move selected card to top
+        newZIndices[slug] = maxZIndex;
+      }
       
-      // Move selected card to top
-      newZIndices[slug] = sortedArticles.length;
+      // Debug log to help troubleshoot
+      if (debugMode) {
+        console.log(`Card ${slug} z-index updated from ${selectedCardZIndex} to ${newZIndices[slug]}`);
+      }
       
       return newZIndices;
     });

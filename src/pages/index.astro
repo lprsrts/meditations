@@ -1,6 +1,8 @@
 ---
 import Deck from '../components/Deck';
 import ThemeToggle from '../components/ThemeToggle';
+import Navbar from '../components/Navbar';
+import ModernBackground from '../components/ModernBackground';
 import { getCollection } from 'astro:content';
 
 // Get all articles from the content collection
@@ -13,6 +15,8 @@ const articles = await getCollection('articles');
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>KENDİME DÜŞÜNCELER</title>
     <link rel="stylesheet" href="/styles/global.css">
+    <!-- Updated font imports -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+Pro:wght@300;400;500;600&family=Spectral:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
     <script is:inline>
       // Immediately apply the saved theme to prevent flash
       const savedTheme = localStorage.getItem('theme');
@@ -25,9 +29,35 @@ const articles = await getCollection('articles');
     </script>
   </head>
   <body>
+    <ModernBackground client:load />
+    <Navbar client:load />
     <ThemeToggle client:load />
     <main>
       <Deck client:load articles={articles} />
     </main>
+
+    <script>
+      // Share theme state between components using a simple custom event system
+      document.addEventListener('DOMContentLoaded', () => {
+        // Initialize with the current theme
+        const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+        const isDark = currentTheme === 'dark';
+        
+        // Dispatch initial theme state
+        window.dispatchEvent(new CustomEvent('themeChange', { 
+          detail: { isDarkMode: isDark }
+        }));
+        
+        // Listen for theme changes from ThemeToggle component
+        window.addEventListener('storage', (event) => {
+          if (event.key === 'theme') {
+            const newIsDark = event.newValue === 'dark';
+            window.dispatchEvent(new CustomEvent('themeChange', { 
+              detail: { isDarkMode: newIsDark }
+            }));
+          }
+        });
+      });
+    </script>
   </body>
 </html>
