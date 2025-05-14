@@ -1,1 +1,0 @@
-document.addEventListener("DOMContentLoaded",()=>{const t=(document.documentElement.getAttribute("data-theme")||"light")==="dark";window.dispatchEvent(new CustomEvent("themeChange",{detail:{isDarkMode:t}})),window.addEventListener("storage",e=>{if(e.key==="theme"){const n=e.newValue==="dark";window.dispatchEvent(new CustomEvent("themeChange",{detail:{isDarkMode:n}}))}})});
