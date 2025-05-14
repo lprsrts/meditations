@@ -1,5 +1,5 @@
 ---
-import ThemeToggle from './ThemeToggle';
+import Navbar from './Navbar';
 // ArticleLayout.astro - simplified layout without top bar and images
 ---
 
@@ -10,6 +10,8 @@ import ThemeToggle from './ThemeToggle';
     <title>Alper Saritas • Kendime Düşünceler</title>
     <link rel="stylesheet" href="/styles/global.css">
     <link rel="stylesheet" href="/styles/article.css">
+    <link rel="stylesheet" href="/styles/mobile.css">
+    <link rel="stylesheet" href="/styles/mobile-override.css">
     <!-- Updated font imports -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+Pro:wght@300;400;500;600&family=Spectral:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
     <script is:inline>
@@ -24,7 +26,7 @@ import ThemeToggle from './ThemeToggle';
     </script>
   </head>
   <body>
-    <ThemeToggle client:load />
+    <Navbar client:load />
     <main class="article">
       <aside class="left-col"></aside>
       <section class="center-col">

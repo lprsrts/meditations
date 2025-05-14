@@ -1,0 +1,175 @@
+/* Mobile Menu Styles */
+:root {
+  /* These are placeholders - they will be overridden by the actual CSS variables */
+  --accent-color: #124E66;
+  --text-color: #212A31;
+  --card-border: #748D92;
+}
+
+/* Mobile Menu Button */
+.mobile-menu-button {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 36px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 8px 6px;
+  margin-left: auto;
+  z-index: 20;
+  position: relative;
+}
+
+[data-theme="dark"] .mobile-menu-button {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu-button:focus {
+  outline: 2px solid var(--accent-color);
+}
+
+.mobile-menu-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .mobile-menu-button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* The hamburger lines */
+.mobile-menu-button span {
+  width: 100%;
+  height: 3px;
+  background: var(--text-color);
+  transition: all 0.3s ease-in-out;
+  transform-origin: center;
+  border-radius: 3px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.mobile-menu-button span:last-child {
+  margin-bottom: 0;
+}
+
+/* Hamburger animation when menu is open */
+.mobile-menu-button.open span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+  margin-bottom: 0;
+}
+
+.mobile-menu-button.open span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-10px);
+  margin-bottom: 0;
+}
+
+.mobile-menu-button.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+  margin-bottom: 0;
+}
+
+/* Mobile Navigation Menu */
+.mobile-nav {
+  position: fixed;
+  top: 64px; /* Height of navbar */
+  left: 0;
+  width: 100%;
+  background: var(--navbar-bg);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 10px var(--shadow-color);
+  z-index: 9;
+  overflow: hidden;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.mobile-nav-link {
+  font-family: var(--font-ui);
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 1rem 0.5rem;
+  border-bottom: 1px solid var(--card-border);
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.mobile-nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 10px;
+  left: 0.5rem;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.mobile-nav-link:hover::after {
+  width: 30px;
+}
+
+.mobile-nav-link.coming-soon {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.mobile-nav-link.coming-soon:hover::after {
+  width: 0;
+}
+
+.mobile-theme-toggle {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+  margin-top: 0.5rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  /* Hide desktop nav and show mobile menu button */
+  .desktop-nav {
+    display: none !important;
+  }
+  
+  .mobile-menu-button {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  
+  .navbar {
+    justify-content: space-between !important;
+  }
+  
+  .mobile-nav {
+    top: 56px; /* Adjust for smaller navbar on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .mobile-menu-button {
+    width: 35px;
+    height: 28px;
+    padding: 6px 5px;
+    right: 10px;
+  }
+  
+  .logo {
+    font-size: 0.85rem;
+    max-width: 70%;
+  }
+  
+  .mobile-nav {
+    top: 52px; /* Adjust for even smaller navbar */
+  }
+}
