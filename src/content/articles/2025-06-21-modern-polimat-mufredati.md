@@ -1,3 +1,8 @@
+---
+title: Modern Polimat Müfredatı
+date: 2025-06-21
+---
+
 # Polimat Müfredatı: Epistemolojik Döngü Yolculuğu
 
 ## I. Epistemolojik Döngü
