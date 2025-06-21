@@ -1,189 +1,186 @@
----
-title: Modern Polymath Curriculum
-date: 2025-06-21
----
-# Polymath Curriculum: A Journey Through the Epistemological Cycle
+# Polimat Müfredatı: Epistemolojik Döngü Yolculuğu
 
-## I. Epistemological Cycle
+## I. Epistemolojik Döngü
 
-The epistemological cycle describes the stages of deepening understanding across any discipline:
+Epistemolojik döngü, herhangi bir disiplinde anlamın derinleşme evrelerini tanımlar:
 
-1. **Naïve Realism** – Belief in appearances or inherited assumptions
-2. **Skepticism** – Doubt and recognition of contradictions
-3. **Formalism** – Building symbolic/logical systems
-4. **Abstraction** – Recognizing meta-patterns across systems
-5. **Intuition Return** – Internalized, re-anchored understanding
+1. **Naif Realizm** – Görünene veya kültürel varsayımlara doğrudan inanmak
+2. **Şüphecilik** – Çelişkileri fark ederek görünene kuşku duymak
+3. **Formalizm** – Sembolik veya mantıksal sistemler inşa etmek
+4. **Soyutlama** – Sistemler arası üst-düzey desenleri fark etmek
+5. **İçgörüye Dönüş** – Kuramla yeniden şekillenmiş, içselleşmiş anlayış
 
 ---
 
-## II. Curriculum Structure
+## II. Müfredat Yapısı
 
-- **Format**: Self-paced study through books, digital media, experiments, writing, and project-based work
-- **Goal**: Create a well-rounded generalist with deep mastery in one domain
-- **Approach**: Use the epistemological cycle in each domain; integrate cross-disciplinary insight
-- **Target Audience**: Adults in their early 20s with access to a large library (digital or physical)
-
----
-
-## A. Prologue: Foundations of Knowing
-
-### Topics
-- Philosophy of knowledge: Plato → Kant → Popper → Kuhn → Feyerabend
-- Classical logic and formal reasoning
-- Scientific method and falsifiability
-- Mathematics as a language
-
-### Goal
-Develop a foundational understanding of how humans construct reliable belief and theory.
+- **Format**: Kitap, dijital medya, deney, yazı ve proje bazlı çalışma ile kendi hızında öğrenim
+- **Amaç**: Geniş çapta bilgi sahibi, bir alanda derin ustalık kazanmış birey yetiştirmek
+- **Yaklaşım**: Her alanda epistemolojik döngüyü izleyerek disiplinlerarası bağlar kurmak
+- **Hedef Kitle**: 20’li yaşlarının başında, geniş fiziksel ve dijital kütüphaneye erişimi olan birey
 
 ---
 
-## B. Natural Systems
+## A. Giriş: Bilginin Temelleri
 
-### 1. Matter and Motion (Physics)
-- Newtonian mechanics
-- Thermodynamics
-- Electromagnetism
-- Relativity
-- Quantum mechanics
+### Konular
+- Bilgi felsefesi: Platon → Kant → Popper → Kuhn → Feyerabend
+- Klasik mantık ve akıl yürütme
+- Bilimsel yöntem ve yanlışlanabilirlik
+- Matematiğin bir dil olarak kullanımı
 
-### 2. Structure and Reaction (Chemistry)
-- Atomic theory and bonding
-- Thermochemistry
-- Reaction mechanisms
-- Organic and biochemistry
-
-### 3. Living Systems (Biology)
-- Cell theory
-- Genetics and evolution
-- Physiology
-- Ecosystem modeling
-
-### 4. Planetary and Ecological Systems
-- Earth systems science
-- Climate systems and sustainability
-- Planetary boundaries and cycles
-
-### Goal
-Understand nature as interlinked physical, chemical, and biological systems.
+### Amaç
+İnsanların güvenilir bilgi ve kuramları nasıl inşa ettiğini anlamak.
 
 ---
 
-## C. Human Systems
+## B. Doğa Sistemleri
 
-### 1. Mind and Behavior (Psychology)
-- Cognitive models
-- Developmental stages
-- Emotions, motivations, biases
+### 1. Madde ve Hareket (Fizik)
+- Newton mekaniği
+- Termodinamik
+- Elektromanyetizma
+- Görelilik
+- Kuantum mekaniği
 
-### 2. Social Structures (Sociology)
-- Norms, institutions, class
-- Identity, roles, inequality
+### 2. Yapı ve Tepkime (Kimya)
+- Atom kuramı ve bağ yapıları
+- Termokimya
+- Tepkime mekanizmaları
+- Organik ve biyokimya
 
-### 3. Power and Order (Politics + History)
-- State formation
-- Political ideologies
-- Historical revolutions and shifts
+### 3. Canlı Sistemler (Biyoloji)
+- Hücre kuramı
+- Genetik ve evrim
+- Fizyoloji
+- Ekosistem modellemesi
 
-### Goal
-Understand how individuals and groups construct, inherit, and challenge systems of behavior and power.
+### 4. Gezegen ve Ekolojik Sistemler
+- Yer sistem bilimi
+- İklim sistemleri ve sürdürülebilirlik
+- Döngüler (karbon, azot vs.)
 
----
-
-## D. Symbolic Systems
-
-### 1. Mathematics
-- Arithmetic, algebra, geometry
-- Calculus and linear algebra
-- Probability and statistics
-- Abstract algebra, graph theory, logic
-
-### 2. Computation
-- Programming fundamentals
-- Algorithms and data structures
-- Operating systems and networks
-- Machine learning basics
-
-### 3. Language and Meaning
-- Grammar and linguistics
-- Semiotics and symbolic representation
-- Philosophy of language
-
-### Goal
-Develop fluency in abstract symbolic systems and their manipulation.
+### Amaç
+Doğayı fiziksel, kimyasal ve biyolojik sistemlerin iç içe geçmiş yapısı olarak kavramak.
 
 ---
 
-## E. Applied Systems
+## C. İnsan Sistemleri
 
-### 1. Engineering Principles
-- Design constraints and optimization
-- Control theory
-- Electrical and mechanical systems
-- Software architecture
+### 1. Zihin ve Davranış (Psikoloji)
+- Bilişsel modeller
+- Gelişimsel evreler
+- Duygu, motivasyon, bilişsel yanılgılar
 
-### 2. Economic Thinking
-- Microeconomics: utility, markets
-- Macroeconomics: trade, inflation
-- Behavioral economics and decision-making
+### 2. Toplumsal Yapılar (Sosyoloji)
+- Normlar, kurumlar, sınıf yapıları
+- Kimlik, roller, eşitsizlik
 
-### 3. Technological Evolution
-- Tool-making history
-- Industrial revolutions
-- Digitization and automation
+### 3. Güç ve Düzen (Politika + Tarih)
+- Devlet oluşumu
+- Politik ideolojiler
+- Devrimler, savaşlar, tarihsel dönüşümler
 
-### Goal
-Understand how humans convert knowledge into systems, tools, and technologies.
+### Amaç
+Bireylerin ve toplumların davranış ve güç sistemlerini nasıl kurduğu ve sorguladığını kavramak.
 
 ---
 
-## F. Self, Meaning, and Culture
+## D. Sembolik Sistemler
 
-### 1. Ethics and Moral Reasoning
-- Classical ethical frameworks
-- Modern bioethics and AI ethics
-- Applied dilemmas and values
+### 1. Matematik
+- Aritmetik, cebir, geometri
+- Kalkülüs, lineer cebir
+- Olasılık ve istatistik
+- Soyut cebir, grafik kuramı, mantık
 
-### 2. Art and Aesthetics
-- History and function of art
-- Expression through different media
-- Creativity as epistemic process
+### 2. Hesaplama
+- Programlama temelleri
+- Algoritmalar ve veri yapıları
+- İşletim sistemleri ve ağlar
+- Makine öğrenmesine giriş
 
-### 3. Lifeworld and Meaning-Making
-- Phenomenology and presence
-- Narrative, myth, and worldview
-- Practical integration of knowledge
+### 3. Dil ve Anlam
+- Dilbilgisi ve dilbilim
+- Göstergebilim ve anlam temsil sistemleri
+- Dil felsefesi
 
-### Goal
-Cultivate a grounded and reflective life integrated with internalized wisdom.
-
----
-
-## G. Capstone Path: Master of One
-
-Once broad exposure is complete, select a specialization to:
-
-- Achieve deep theoretical understanding
-- Apply skills through a real-world project (e.g., paper, prototype, research)
-- Contribute knowledge or tools to the community
+### Amaç
+Soyut sembolik sistemlerde akıcılık ve dönüşüm becerisi kazanmak.
 
 ---
 
-## Summary Table
+## E. Uygulamalı Sistemler
 
-| Domain         | Topics Covered                             | Related Fields                          |
-|----------------|---------------------------------------------|------------------------------------------|
-| Foundations    | Philosophy, logic, math, scientific method | All                                      |
-| Nature         | Physics, chemistry, biology, ecology       | Engineering, medicine, environment       |
-| Human          | Psychology, sociology, history, politics   | Law, economics, education                |
-| Symbolic       | Math, computing, language, logic           | AI, philosophy, system design            |
-| Applied        | Engineering, economics, technology         | Industry, politics, design               |
-| Personal       | Ethics, aesthetics, culture, life practice | Meaning-making, decision-making          |
+### 1. Mühendislik Prensipleri
+- Tasarım kısıtları ve optimizasyon
+- Kontrol teorisi
+- Elektrik ve mekanik sistemler
+- Yazılım mimarisi
+
+### 2. Ekonomik Düşünce
+- Mikroekonomi: fayda, piyasa, denge
+- Makroekonomi: ticaret, enflasyon, para politikaları
+- Davranışsal ekonomi ve karar kuramı
+
+### 3. Teknolojik Evrim
+- Alet yapım tarihi
+- Endüstri devrimleri
+- Sayısallaşma ve otomasyon
+
+### Amaç
+Bilginin nasıl sistem, araç ve teknolojiye dönüştüğünü kavramak.
 
 ---
 
-## Final Notes
+## F. Benlik, Anlam ve Kültür
 
-- This curriculum is a **path of reconstruction**, not memorization.
-- The learner must build—not just receive—understanding.
-- The goal is a person who can **move between domains**, **see hidden structure**, and **act with mastery and integrity**.
+### 1. Etik ve Ahlaki Düşünce
+- Klasik etik kuramlar
+- Modern etik sorunlar: AI, çevre, biyoloji
+- Kişisel değer sistemleri
+
+### 2. Sanat ve Estetik
+- Sanatın işlevi ve tarihi
+- Farklı medyumlarda ifade
+- Yaratıcılık ve bilgi üretimi
+
+### 3. Yaşam Dünyası ve Anlam Kurma
+- Fenomenoloji ve farkındalık
+- Anlatı, mit, dünya görüşü
+- Bilginin gündelik yaşama entegrasyonu
+
+### Amaç
+Bilgiyi içselleştirerek yaşama bütünlüklü şekilde yansıtmak.
+
+---
+
+## G. Zirve Aşaması: Bir Alanda Ustalık
+
+Geniş yelpazeli öğrenme süreci sonrası, aşağıdakiler hedeflenir:
+
+- Seçilen alanda derin teorik uzmanlık
+- Uygulamalı proje geliştirme (makale, prototip, simülasyon)
+- Üretilen bilginin veya aracın toplulukla paylaşımı
+
+---
+
+## Özet Tablosu
+
+| Alan           | Kapsanan Konular                           | İlgili Disiplinler                     |
+|----------------|---------------------------------------------|----------------------------------------|
+| Temeller       | Felsefe, mantık, matematik, bilimsel yöntem | Tüm alanlar                            |
+| Doğa           | Fizik, kimya, biyoloji, ekoloji             | Mühendislik, tıp, çevre                |
+| İnsan          | Psikoloji, sosyoloji, tarih, politika       | Hukuk, ekonomi, eğitim                 |
+| Sembolik       | Matematik, bilişim, dil, mantık             | Yapay zeka, sistem tasarımı, felsefe   |
+| Uygulamalı     | Mühendislik, ekonomi, teknoloji             | Sanayi, politika, tasarım              |
+| Kişisel        | Etik, estetik, kültür, yaşam pratiği        | Anlam üretimi, karar alma              |
+
+---
+
+## Son Notlar
+
+- Bu müfredat bir **yeniden inşa** sürecidir; ezberleme değil.
+- Öğrenen kişi bilgiyi **tüketen değil, kuran** olmalıdır.
+- Hedef, alanlar arasında **hareket edebilen**, **gizli yapıyı görebilen**,
+  ve **ustalığı bütünsel anlayış için kullanan** bir zihindir.
