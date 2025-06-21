@@ -1,0 +1,219 @@
+<!DOCTYPE html><html lang="tr"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Alper Saritas • Kendime Düşünceler</title><link rel="stylesheet" href="/styles/global.css"><link rel="stylesheet" href="/styles/article.css"><link rel="stylesheet" href="/styles/mobile.css"><link rel="stylesheet" href="/styles/mobile-override.css"><!-- Updated font imports --><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+Pro:wght@300;400;500;600&family=Spectral:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"><script>
+      // Immediately apply the saved theme to prevent flash
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      } else {
+        // Initialize with light mode by default
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    </script></head> <body> <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event("astro:load"));})();;(()=>{var A=Object.defineProperty;var g=(i,o,a)=>o in i?A(i,o,{enumerable:!0,configurable:!0,writable:!0,value:a}):i[o]=a;var d=(i,o,a)=>g(i,typeof o!="symbol"?o+"":o,a);{let i={0:t=>m(t),1:t=>a(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(a(t)),5:t=>new Set(a(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t),11:t=>1/0*t},o=t=>{let[l,e]=t;return l in i?i[l](e):void 0},a=t=>t.map(o),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([l,e])=>[l,o(e)]));class y extends HTMLElement{constructor(){super(...arguments);d(this,"Component");d(this,"hydrator");d(this,"hydrate",async()=>{var b;if(!this.hydrator||!this.isConnected)return;let e=(b=this.parentElement)==null?void 0:b.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let c=this.querySelectorAll("astro-slot"),n={},h=this.querySelectorAll("template[data-astro-template]");for(let r of h){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(let r of c){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("name")||"default"]=r.innerHTML)}let p;try{p=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(r){let s=this.getAttribute("component-url")||"<unknown>",v=this.getAttribute("component-export");throw v&&(s+=` (export ${v})`),console.error(`[hydrate] Error parsing props for component ${s}`,this.getAttribute("props"),r),r}let u;await this.hydrator(this)(this.Component,p,n,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),c.disconnect(),this.childrenConnectedCallback()},c=new MutationObserver(()=>{var n;((n=this.lastChild)==null?void 0:n.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});c.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}async start(){let e=JSON.parse(this.getAttribute("opts")),c=this.getAttribute("client");if(Astro[c]===void 0){window.addEventListener(`astro:${c}`,()=>this.start(),{once:!0});return}try{await Astro[c](async()=>{let n=this.getAttribute("renderer-url"),[h,{default:p}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),u=this.getAttribute("component-export")||"default";if(!u.includes("."))this.Component=h[u];else{this.Component=h;for(let f of u.split("."))this.Component=this.Component[f]}return this.hydrator=p,this.hydrate},e,this)}catch(n){console.error(`[astro-island] Error hydrating ${this.getAttribute("component-url")}`,n)}}attributeChangedCallback(){this.hydrate()}}d(y,"observedAttributes",["props"]),customElements.get("astro-island")||customElements.define("astro-island",y)}})();</script><astro-island uid="Z2m5FMW" prefix="r0" component-url="/assets/Navbar.CmKX5fJ3.js" component-export="default" renderer-url="/assets/client.DyS41jpO.js" props="{}" ssr client="load" opts="{&quot;name&quot;:&quot;Navbar&quot;,&quot;value&quot;:true}" await-children><nav class="navbar "><div class="logo">Alper Saritas • Kendime Düşünceler</div><div class="nav-links desktop-nav"><a href="https://alpersaritas.com" class="nav-link">Ana Sayfa</a><span class="nav-link coming-soon">Engineering Blog</span><span class="nav-link coming-soon">Code Lab</span><button class="theme-toggle" aria-label="Theme toggle">...</button></div><button class="mobile-menu-button " aria-label="Toggle Menu" aria-expanded="false"><span></span><span></span><span></span></button></nav><!--astro:end--></astro-island> <main class="article"> <aside class="left-col"></aside> <section class="center-col"> <a href="/" class="back-button">← Ana sayfaya dön</a>  <h1>Modern Polimat Müfredatı</h1> <h1 id="polimat-müfredatı-epistemolojik-döngü-yolculuğu">Polimat Müfredatı: Epistemolojik Döngü Yolculuğu</h1>
+<h2 id="i-epistemolojik-döngü">I. Epistemolojik Döngü</h2>
+<p>Epistemolojik döngü, herhangi bir disiplinde anlamın derinleşme evrelerini tanımlar:</p>
+<ol>
+<li><strong>Naif Realizm</strong> – Görünene veya kültürel varsayımlara doğrudan inanmak</li>
+<li><strong>Şüphecilik</strong> – Çelişkileri fark ederek görünene kuşku duymak</li>
+<li><strong>Formalizm</strong> – Sembolik veya mantıksal sistemler inşa etmek</li>
+<li><strong>Soyutlama</strong> – Sistemler arası üst-düzey desenleri fark etmek</li>
+<li><strong>İçgörüye Dönüş</strong> – Kuramla yeniden şekillenmiş, içselleşmiş anlayış</li>
+</ol>
+<hr>
+<h2 id="ii-müfredat-yapısı">II. Müfredat Yapısı</h2>
+<ul>
+<li><strong>Format</strong>: Kitap, dijital medya, deney, yazı ve proje bazlı çalışma ile kendi hızında öğrenim</li>
+<li><strong>Amaç</strong>: Geniş çapta bilgi sahibi, bir alanda derin ustalık kazanmış birey yetiştirmek</li>
+<li><strong>Yaklaşım</strong>: Her alanda epistemolojik döngüyü izleyerek disiplinlerarası bağlar kurmak</li>
+<li><strong>Hedef Kitle</strong>: 20’li yaşlarının başında, geniş fiziksel ve dijital kütüphaneye erişimi olan birey</li>
+</ul>
+<hr>
+<h2 id="a-giriş-bilginin-temelleri">A. Giriş: Bilginin Temelleri</h2>
+<h3 id="konular">Konular</h3>
+<ul>
+<li>Bilgi felsefesi: Platon → Kant → Popper → Kuhn → Feyerabend</li>
+<li>Klasik mantık ve akıl yürütme</li>
+<li>Bilimsel yöntem ve yanlışlanabilirlik</li>
+<li>Matematiğin bir dil olarak kullanımı</li>
+</ul>
+<h3 id="amaç">Amaç</h3>
+<p>İnsanların güvenilir bilgi ve kuramları nasıl inşa ettiğini anlamak.</p>
+<hr>
+<h2 id="b-doğa-sistemleri">B. Doğa Sistemleri</h2>
+<h3 id="1-madde-ve-hareket-fizik">1. Madde ve Hareket (Fizik)</h3>
+<ul>
+<li>Newton mekaniği</li>
+<li>Termodinamik</li>
+<li>Elektromanyetizma</li>
+<li>Görelilik</li>
+<li>Kuantum mekaniği</li>
+</ul>
+<h3 id="2-yapı-ve-tepkime-kimya">2. Yapı ve Tepkime (Kimya)</h3>
+<ul>
+<li>Atom kuramı ve bağ yapıları</li>
+<li>Termokimya</li>
+<li>Tepkime mekanizmaları</li>
+<li>Organik ve biyokimya</li>
+</ul>
+<h3 id="3-canlı-sistemler-biyoloji">3. Canlı Sistemler (Biyoloji)</h3>
+<ul>
+<li>Hücre kuramı</li>
+<li>Genetik ve evrim</li>
+<li>Fizyoloji</li>
+<li>Ekosistem modellemesi</li>
+</ul>
+<h3 id="4-gezegen-ve-ekolojik-sistemler">4. Gezegen ve Ekolojik Sistemler</h3>
+<ul>
+<li>Yer sistem bilimi</li>
+<li>İklim sistemleri ve sürdürülebilirlik</li>
+<li>Döngüler (karbon, azot vs.)</li>
+</ul>
+<h3 id="amaç-1">Amaç</h3>
+<p>Doğayı fiziksel, kimyasal ve biyolojik sistemlerin iç içe geçmiş yapısı olarak kavramak.</p>
+<hr>
+<h2 id="c-i̇nsan-sistemleri">C. İnsan Sistemleri</h2>
+<h3 id="1-zihin-ve-davranış-psikoloji">1. Zihin ve Davranış (Psikoloji)</h3>
+<ul>
+<li>Bilişsel modeller</li>
+<li>Gelişimsel evreler</li>
+<li>Duygu, motivasyon, bilişsel yanılgılar</li>
+</ul>
+<h3 id="2-toplumsal-yapılar-sosyoloji">2. Toplumsal Yapılar (Sosyoloji)</h3>
+<ul>
+<li>Normlar, kurumlar, sınıf yapıları</li>
+<li>Kimlik, roller, eşitsizlik</li>
+</ul>
+<h3 id="3-güç-ve-düzen-politika--tarih">3. Güç ve Düzen (Politika + Tarih)</h3>
+<ul>
+<li>Devlet oluşumu</li>
+<li>Politik ideolojiler</li>
+<li>Devrimler, savaşlar, tarihsel dönüşümler</li>
+</ul>
+<h3 id="amaç-2">Amaç</h3>
+<p>Bireylerin ve toplumların davranış ve güç sistemlerini nasıl kurduğu ve sorguladığını kavramak.</p>
+<hr>
+<h2 id="d-sembolik-sistemler">D. Sembolik Sistemler</h2>
+<h3 id="1-matematik">1. Matematik</h3>
+<ul>
+<li>Aritmetik, cebir, geometri</li>
+<li>Kalkülüs, lineer cebir</li>
+<li>Olasılık ve istatistik</li>
+<li>Soyut cebir, grafik kuramı, mantık</li>
+</ul>
+<h3 id="2-hesaplama">2. Hesaplama</h3>
+<ul>
+<li>Programlama temelleri</li>
+<li>Algoritmalar ve veri yapıları</li>
+<li>İşletim sistemleri ve ağlar</li>
+<li>Makine öğrenmesine giriş</li>
+</ul>
+<h3 id="3-dil-ve-anlam">3. Dil ve Anlam</h3>
+<ul>
+<li>Dilbilgisi ve dilbilim</li>
+<li>Göstergebilim ve anlam temsil sistemleri</li>
+<li>Dil felsefesi</li>
+</ul>
+<h3 id="amaç-3">Amaç</h3>
+<p>Soyut sembolik sistemlerde akıcılık ve dönüşüm becerisi kazanmak.</p>
+<hr>
+<h2 id="e-uygulamalı-sistemler">E. Uygulamalı Sistemler</h2>
+<h3 id="1-mühendislik-prensipleri">1. Mühendislik Prensipleri</h3>
+<ul>
+<li>Tasarım kısıtları ve optimizasyon</li>
+<li>Kontrol teorisi</li>
+<li>Elektrik ve mekanik sistemler</li>
+<li>Yazılım mimarisi</li>
+</ul>
+<h3 id="2-ekonomik-düşünce">2. Ekonomik Düşünce</h3>
+<ul>
+<li>Mikroekonomi: fayda, piyasa, denge</li>
+<li>Makroekonomi: ticaret, enflasyon, para politikaları</li>
+<li>Davranışsal ekonomi ve karar kuramı</li>
+</ul>
+<h3 id="3-teknolojik-evrim">3. Teknolojik Evrim</h3>
+<ul>
+<li>Alet yapım tarihi</li>
+<li>Endüstri devrimleri</li>
+<li>Sayısallaşma ve otomasyon</li>
+</ul>
+<h3 id="amaç-4">Amaç</h3>
+<p>Bilginin nasıl sistem, araç ve teknolojiye dönüştüğünü kavramak.</p>
+<hr>
+<h2 id="f-benlik-anlam-ve-kültür">F. Benlik, Anlam ve Kültür</h2>
+<h3 id="1-etik-ve-ahlaki-düşünce">1. Etik ve Ahlaki Düşünce</h3>
+<ul>
+<li>Klasik etik kuramlar</li>
+<li>Modern etik sorunlar: AI, çevre, biyoloji</li>
+<li>Kişisel değer sistemleri</li>
+</ul>
+<h3 id="2-sanat-ve-estetik">2. Sanat ve Estetik</h3>
+<ul>
+<li>Sanatın işlevi ve tarihi</li>
+<li>Farklı medyumlarda ifade</li>
+<li>Yaratıcılık ve bilgi üretimi</li>
+</ul>
+<h3 id="3-yaşam-dünyası-ve-anlam-kurma">3. Yaşam Dünyası ve Anlam Kurma</h3>
+<ul>
+<li>Fenomenoloji ve farkındalık</li>
+<li>Anlatı, mit, dünya görüşü</li>
+<li>Bilginin gündelik yaşama entegrasyonu</li>
+</ul>
+<h3 id="amaç-5">Amaç</h3>
+<p>Bilgiyi içselleştirerek yaşama bütünlüklü şekilde yansıtmak.</p>
+<hr>
+<h2 id="g-zirve-aşaması-bir-alanda-ustalık">G. Zirve Aşaması: Bir Alanda Ustalık</h2>
+<p>Geniş yelpazeli öğrenme süreci sonrası, aşağıdakiler hedeflenir:</p>
+<ul>
+<li>Seçilen alanda derin teorik uzmanlık</li>
+<li>Uygulamalı proje geliştirme (makale, prototip, simülasyon)</li>
+<li>Üretilen bilginin veya aracın toplulukla paylaşımı</li>
+</ul>
+<hr>
+<h2 id="özet-tablosu">Özet Tablosu</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Alan</th><th>Kapsanan Konular</th><th>İlgili Disiplinler</th></tr></thead><tbody><tr><td>Temeller</td><td>Felsefe, mantık, matematik, bilimsel yöntem</td><td>Tüm alanlar</td></tr><tr><td>Doğa</td><td>Fizik, kimya, biyoloji, ekoloji</td><td>Mühendislik, tıp, çevre</td></tr><tr><td>İnsan</td><td>Psikoloji, sosyoloji, tarih, politika</td><td>Hukuk, ekonomi, eğitim</td></tr><tr><td>Sembolik</td><td>Matematik, bilişim, dil, mantık</td><td>Yapay zeka, sistem tasarımı, felsefe</td></tr><tr><td>Uygulamalı</td><td>Mühendislik, ekonomi, teknoloji</td><td>Sanayi, politika, tasarım</td></tr><tr><td>Kişisel</td><td>Etik, estetik, kültür, yaşam pratiği</td><td>Anlam üretimi, karar alma</td></tr></tbody></table>
+<hr>
+<h2 id="son-notlar">Son Notlar</h2>
+<ul>
+<li>Bu müfredat bir <strong>yeniden inşa</strong> sürecidir; ezberleme değil.</li>
+<li>Öğrenen kişi bilgiyi <strong>tüketen değil, kuran</strong> olmalıdır.</li>
+<li>Hedef, alanlar arasında <strong>hareket edebilen</strong>, <strong>gizli yapıyı görebilen</strong>,
+ve <strong>ustalığı bütünsel anlayış için kullanan</strong> bir zihindir.</li>
+</ul>  <a href="/" class="back-button bottom">← Ana sayfaya dön</a> </section> <aside class="right-col"></aside> </main> </body></html>
